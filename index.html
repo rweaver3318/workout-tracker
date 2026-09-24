@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d6e4f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ron Workout">
+  <meta name="description" content="Ron Weaver 8-week calf rehab + strength tracker (Arnold program)">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+  <title>Ron Workout — Calf Rehab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Ron Workout</h1>
+    <div class="sub">Calf rehab + strength · Arnold program</div>
+  </header>
+
+  <main>
+    <section id="view-today" class="view"></section>
+    <section id="view-pick" class="view hidden"></section>
+    <section id="view-progress" class="view hidden"></section>
+    <section id="view-settings" class="view hidden"></section>
+  </main>
+
+  <nav class="nav" aria-label="Main">
+    <button type="button" data-view="today" class="active"><span aria-hidden="true">●</span>Today</button>
+    <button type="button" data-view="pick"><span aria-hidden="true">☰</span>Days</button>
+    <button type="button" data-view="progress"><span aria-hidden="true">▲</span>Progress</button>
+    <button type="button" data-view="settings"><span aria-hidden="true">⚙</span>Settings</button>
+  </nav>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
