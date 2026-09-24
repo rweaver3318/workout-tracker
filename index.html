@@ -6,19 +6,27 @@
   <meta name="theme-color" content="#0d6e4f">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Ron Workout">
-  <meta name="description" content="Ron Weaver 8-week calf rehab + strength tracker (Arnold program)">
+  <meta name="apple-mobile-web-app-title" content="Weaver Workout">
+  <meta name="description" content="Ron & Cindy Weaver 8-week rehab + strength tracker (Arnold programs)">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-  <title>Ron Workout — Calf Rehab</title>
+  <title>Weaver Workout — Ron &amp; Cindy</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="app-header">
-    <h1>Ron Workout</h1>
-    <div class="sub">Calf rehab + strength · Arnold program</div>
+    <div class="header-row">
+      <div class="header-title">
+        <h1>Weaver Workout</h1>
+        <div class="sub" id="header-sub">Arnold programs</div>
+      </div>
+      <div class="person-switch" role="group" aria-label="Choose person">
+        <button type="button" data-person="ron" aria-pressed="true">Ron</button>
+        <button type="button" data-person="cindy" aria-pressed="false">Cindy</button>
+      </div>
+    </div>
   </header>
 
   <main>

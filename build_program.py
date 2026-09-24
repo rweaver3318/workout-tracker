@@ -1,47 +1,26 @@
 #!/usr/bin/env python3
 """
-Build program.json from Arnold's 8-week plan.
+Build program-ron.json (and program-cindy.json) for the workout tracker.
 
-Source of truth for content: /workspace/arnold/program.md
-(and Session 1 detail in /workspace/arnold/sessions/2026-09-25.md).
+    python3 build_program.py          # rebuilds BOTH people
+    python3 build_program_cindy.py    # rebuilds Cindy only
 
-This script embeds a structured mirror of that content so regenerating
-or editing is easy — re-run after Arnold adjusts the plan:
-
-    python3 build_program.py
-
-JSON schema (top-level):
-  athlete, injury, programWindow, startDate, endDate
-  painRules, redFlags
-  calfLevels[]     — criteria-based levels 0–7 (exercises change by level)
-  shouldersByWeek  — { "1-2": [...], "3-4": [...], ... }
-  hipsByWeek       — same week-band keys
-  conditioningNotes[]
-  schedule[]       — dated sessions {date, day, week, type, label}
-  sessionTypes     — H / S / C / R meanings
-
-Exercise object:
-  id, name, sets, reps | hold, load, notes, cues?, optional?, hipDependent?
-
-Calf content for a session = calfLevels[currentLevel].exercises
-Accessory content = shouldersByWeek[band] or hipsByWeek[band] by session type + week.
+Ron's content mirrors /workspace/arnold/program.md (incl. the Sep 24 hip update
+and "Ron's priorities") and sessions/2026-09-25.md. Cindy's lives in
+build_program_cindy.py (mirrors /workspace/arnold/cindy/program.md).
+JSON schema is documented in program_common.py. Keep exercise ids stable –
+they key the logged data in localStorage.
 """
 from __future__ import annotations
 
-import json
-from pathlib import Path
-
-OUT = Path(__file__).resolve().parent / "program.json"
-
-# ---------------------------------------------------------------------------
-# Structured mirror of program.md
-# ---------------------------------------------------------------------------
+from program_common import ex, week_band, write
 
 PROGRAM = {
+    "person": "ron",
+    "displayName": "Ron",
     "athlete": "Ron Weaver",
     "timezone": "America/New_York",
-    "injury": "Likely grade 2 right gastrocnemius tear, Sat Sep 19, 2026",
-    "also": "Right THA Mar 4, 2026 (anterior, no restrictions as of Sep 24). Pickleball + golf return.",
+    "conditions": "Likely grade 2 RIGHT gastrocnemius tear (Sat Sep 19, 2026) · RIGHT THA Mar 4, 2026 – anterior approach, no surgeon restrictions (Sep 24 update)",
     "programWindow": "Fri Sep 25 – Fri Nov 20, 2026",
     "startDate": "2026-09-25",
     "endDate": "2026-11-20",
@@ -49,6 +28,7 @@ PROGRAM = {
         "Educational training plan, not a medical diagnosis or prescription. "
         "Seek medical care for diagnosis, imaging, and clearance before return to sport."
     ),
+    "banner": "Calf pain ceiling ≤3/10. Stop for red flags (calf swelling/warmth, pop, night pain, hip instability, SOB).",
     "painRules": {
         "ceiling": 3,
         "pass": "Pain ≤3/10 during AND settles by next morning AND no new/increased swelling",
@@ -68,41 +48,26 @@ PROGRAM = {
         "C": "Optional calf isometrics/ROM or light conditioning + mobility",
         "R": "Week 8 reassessment",
     },
+    "optionalTypes": ["C"],
     "notes": [
-        "Calf work is criteria-based LEVELS — start Level 0; do not skip.",
-        "Shoulders and hips advance on a fixed weekly schedule independent of calf level.",
-        "Both issues are RIGHT side — right-leg loading that stresses the calf must match current calf level.",
-        "Air/goblet squats are in from Session 1 (flat-footed). Hold split squats/lunges until calf Level 2+ and a pain-free test.",
+        "Calf is the MAIN focus: criteria-based levels, start Level 0, do not skip.",
+        "Hip update (Sep 24): right anterior THA, no restrictions – hip-dependent (*) exercises unlocked on normal progression; build end-range extension + ER gradually.",
+        "Both issues are RIGHT side: right-leg moves that load the calf (push-off, back-leg split squat, toe step-ups, lunges) must match the calf level. Flat foot / weight through heel until calf Level 3+.",
+        "Air squat → goblet squat (10–30 lb DB, flat-footed, heels down) from Session 1, progressing weekly.",
+        "Split squats, sumo squats, lunges: HOLD until calf Level 2+ AND a one-set pain-free test (calf ≤2/10 during, no worse next morning).",
+        "Keep hip and shoulder volume modest so calf work gets priority.",
     ],
+    "pain": {
+        "title": "Calf pain trend",
+        "ceiling": 3,
+        "fields": [
+            {"key": "painDuring", "label": "Calf pain during session", "short": "Calf (during)", "when": "during", "color": "#0d6e4f"},
+            {"key": "painMorning", "label": "Calf pain next morning", "short": "Calf (next AM)", "when": "morning", "color": "#c45c26"},
+        ],
+    },
 }
 
-
-def ex(
-    id: str,
-    name: str,
-    sets: str,
-    *,
-    reps: str | None = None,
-    hold: str | None = None,
-    load: str = "",
-    notes: str = "",
-    cues: str = "",
-    optional: bool = False,
-    hip_dependent: bool = False,
-) -> dict:
-    d: dict = {"id": id, "name": name, "sets": sets, "load": load, "notes": notes}
-    if reps is not None:
-        d["reps"] = reps
-    if hold is not None:
-        d["hold"] = hold
-    if cues:
-        d["cues"] = cues
-    if optional:
-        d["optional"] = True
-    if hip_dependent:
-        d["hipDependent"] = True
-    return d
-
+SPLIT_GATE = "Hold until calf Level 2+ and a one-set pain-free test (calf ≤2/10 during, no worse next morning)."
 
 CALF_LEVELS = [
     {
@@ -438,163 +403,54 @@ SHOULDERS = {
 
 # Hips reflect Sep 24 updates: * unlocked; air/goblet squat from Session 1;
 # split squats / lunges deferred until calf Level 2+ (noted in cues).
+# Hips reflect the Sep 24 hip update (right anterior THA, no restrictions → * unlocked)
+# and Ron's priorities (air/goblet squat from Session 1; split squats / lunges /
+# sumo squats gated on calf Level 2+ plus a pain-free test).
 HIPS = {
     "1-2": [
-        ex(
-            "h12-bridge",
-            "Glute bridge (short / neutral ROM)",
-            "3",
-            reps="10",
-            load="Bodyweight",
-            notes="Feet flat. Squeeze gently. Avoid max extension + toes out.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h12-abd-side",
-            "Side-lying hip abduction",
-            "3",
-            reps="12/side",
-            load="Bodyweight",
-            notes="Legs stacked, slight hip flexion ok. Controlled.",
-        ),
-        ex(
-            "h12-abd-stand",
-            "Standing band hip abduction",
-            "2–3",
-            reps="12/side",
-            load="Light band",
-            notes="Soft knee. Hold support if needed.",
-        ),
-        ex(
-            "h12-squat",
-            "Air squat → goblet squat",
-            "3",
-            reps="8–10",
-            load="BW → goblet 10–15 lb if easy",
-            notes="Flat feet, weight through heels. Pain-free depth. Stop if calf >2/10.",
-            cues="Heels down. Progress load weekly if form clean.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h12-catcow",
-            "Cat–cow",
-            "2",
-            reps="10",
-            load="—",
-            notes="Slow with breath.",
-        ),
+        ex("h12-bridge", "Glute bridge", "3", reps="10", load="Bodyweight",
+           notes="Feet flat, squeeze. Hip unlocked – build end-range extension gradually."),
+        ex("h12-abd-side", "Side-lying hip abduction", "3", reps="12/side", load="Bodyweight",
+           notes="Legs stacked, controlled."),
+        ex("h12-abd-stand", "Standing band hip abduction", "2–3", reps="12/side", load="Light band",
+           notes="Soft knee. Hold support if needed."),
+        ex("h12-squat", "Air squat → goblet squat", "3", reps="8–10", load="BW → goblet 10–15 lb",
+           notes="Flat feet, heels down, weight through heels. Stop if calf >2/10.",
+           cues="Heels down. Progress load weekly if form clean."),
+        ex("h12-catcow", "Cat–cow", "2", reps="10", load="—", notes="Slow with breath."),
     ],
     "3-4": [
-        ex(
-            "h34-bridge",
-            "Bridge with 2 s squeeze",
-            "3",
-            reps="12",
-            load="Bodyweight",
-            notes="Still avoid end-range extension + ER.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h34-clam",
-            "Side-lying clam (small range)",
-            "3",
-            reps="12",
-            load="Bodyweight / light band",
-            notes="Neutral pelvis. Keep knees from collapsing inward aggressively.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h34-stepup",
-            "Step-up low step",
-            "3",
-            reps="8/side",
-            load="Bodyweight → light DB",
-            notes="Limit trunk lean / deep hip fold. Heel load until calf Level 3+.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h34-rdl",
-            "Hip hinge / RDL pattern light DB",
-            "3",
-            reps="8",
-            load="Light DB",
-            notes="Soft knees; no aggressive end-range.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h34-squat",
-            "Goblet squat",
-            "3",
-            reps="8–10",
-            load="10–30 lb DB",
-            notes="Flat-footed. Progress from weeks 1–2.",
-            hip_dependent=True,
-        ),
+        ex("h34-bridge", "Bridge with 2 s squeeze", "3", reps="12", load="Bodyweight",
+           notes="Build end-range extension + ER gradually."),
+        ex("h34-clam", "Side-lying clam", "3", reps="12", load="Bodyweight / light band",
+           notes="Neutral pelvis, controlled."),
+        ex("h34-stepup", "Step-up low step", "3", reps="8/side", load="Bodyweight → light DB",
+           notes="Flat foot, drive through the heel – no toe push-off until calf Level 3+."),
+        ex("h34-rdl", "Hip hinge / RDL light DB", "3", reps="8", load="Light DB",
+           notes="Soft knees; normal progression (hip unlocked)."),
+        ex("h34-squat", "Goblet squat", "3", reps="8–10", load="10–30 lb DB",
+           notes="Flat-footed, heels down. Progress weekly."),
     ],
     "5-6": [
-        ex(
-            "h56-sl-bridge",
-            "Single-leg bridge (limited extension)",
-            "3",
-            reps="8/side",
-            load="Bodyweight",
-            notes="",
-            hip_dependent=True,
-        ),
-        ex(
-            "h56-latwalk",
-            "Lateral band walk",
-            "3",
-            reps="8 steps each way",
-            load="Band",
-            notes="",
-        ),
-        ex(
-            "h56-split",
-            "Split squat shallow",
-            "3",
-            reps="6–8/side",
-            load="BW → light DB",
-            notes="Only after calf Level 2+ and a one-set pain-free test (≤2/10, no worse morning).",
-            cues="Introduce carefully — not tested with calf yet.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h56-bike",
-            "Optional easy bike intervals (Fayetteville)",
-            "1",
-            hold="10–15 min",
-            load="Easy",
-            notes="",
-            optional=True,
-        ),
+        ex("h56-sl-bridge", "Single-leg bridge", "3", reps="8/side", load="Bodyweight",
+           notes="Unlocked by hip update."),
+        ex("h56-latwalk", "Lateral band walk", "3", reps="8 steps each way", load="Band", notes=""),
+        ex("h56-squat", "Goblet squat", "3", reps="8–10", load="10–30 lb DB",
+           notes="Flat-footed, heels down. Keep progressing weekly."),
+        ex("h56-split", "Split squat", "3", reps="6–8/side", load="BW → light DB",
+           notes="Right leg back = calf push-off load; keep it matched to calf level.",
+           min_level=2, gate_note=SPLIT_GATE),
+        ex("h56-bike", "Easy bike intervals (Fayetteville)", "1", hold="10–15 min", load="Easy",
+           notes="", optional=True),
     ],
     "7-8": [
-        ex(
-            "h78-glute",
-            "Glute med emphasis (abd / clam / band walk)",
-            "3",
-            reps="10–12",
-            load="Band / BW",
-            notes="Continue 2×/week.",
-        ),
-        ex(
-            "h78-latlunge",
-            "Controlled lateral lunges shallow",
-            "3",
-            reps="6/side",
-            load="BW → light",
-            notes="Only after calf Level 2+ pain-free test.",
-            hip_dependent=True,
-        ),
-        ex(
-            "h78-balance",
-            "Single-leg stand",
-            "3",
-            hold="20–30 s",
-            load="Near support",
-            notes="",
-        ),
+        ex("h78-glute", "Glute med emphasis (abd / clam / band walk)", "3", reps="10–12",
+           load="Band / BW", notes="Continue 2×/week."),
+        ex("h78-squat", "Goblet squat", "3", reps="8–10", load="up to 30 lb DB",
+           notes="Flat-footed until calf Level 3+."),
+        ex("h78-latlunge", "Controlled lateral lunge", "3", reps="6/side", load="BW → light",
+           notes="", min_level=2, gate_note=SPLIT_GATE),
+        ex("h78-balance", "Single-leg stand", "3", hold="20–30 s", load="Near support", notes=""),
     ],
 }
 
@@ -673,23 +529,36 @@ SCHEDULE_ROWS = [
 ]
 
 
-def week_band(week: int) -> str:
-    if week <= 2:
-        return "1-2"
-    if week <= 4:
-        return "3-4"
-    if week <= 6:
-        return "5-6"
-    return "7-8"
-
 
 def build() -> dict:
     data = dict(PROGRAM)
-    data["calfLevels"] = CALF_LEVELS
-    data["shouldersByWeek"] = SHOULDERS
-    data["hipsByWeek"] = HIPS
-    data["optionalConditioning"] = OPTIONAL_C
-    data["reassessment"] = REASSESSMENT
+    data["levelSystem"] = {
+        "key": "calf",
+        "label": "Calf level",
+        "short": "Calf L",
+        "advanceRule": "Advance only after 2–3 PASS sessions (pain ≤3, no worse next morning, no extra swelling).",
+        "levels": CALF_LEVELS,
+    }
+    data["blocks"] = {
+        "hips": {"label": "Hips / Glutes", "keyField": "weekBand", "bands": HIPS},
+        "shoulders": {"label": "Shoulders / Upper", "keyField": "weekBand", "bands": SHOULDERS},
+    }
+    data["lists"] = {
+        "optionalConditioning": {"title": "Optional: gentle calf work + conditioning/mobility", "exercises": OPTIONAL_C},
+        "reassessment": {"title": "Week 8 Reassessment", "exercises": REASSESSMENT},
+    }
+    data["sessionTemplates"] = {
+        "H": [
+            {"title": "Calf — Level {level}: {levelName}", "source": "level"},
+            {"title": "Hips / Glutes (Weeks {weekBand})", "source": "block", "block": "hips"},
+        ],
+        "S": [
+            {"title": "Calf — Level {level}: {levelName}", "source": "level"},
+            {"title": "Shoulders / Upper (Weeks {weekBand})", "source": "block", "block": "shoulders"},
+        ],
+        "C": [{"title": "Optional — light calf + conditioning/mobility", "source": "list", "list": "optionalConditioning"}],
+        "R": [{"title": "Week 8 Reassessment", "source": "list", "list": "reassessment"}],
+    }
     data["conditioningNotes"] = [
         "Walking: daily as tolerated; increase time before speed. Soft surfaces first.",
         "Bike (Fayetteville): excellent early cardio — Level 0–2 era, 10–20 min easy.",
@@ -697,28 +566,18 @@ def build() -> dict:
         "Treadmill: prefer after Level 3; jog only after Level 6 entry.",
     ]
     data["schedule"] = [
-        {
-            "date": d,
-            "day": day,
-            "week": week,
-            "type": typ,
-            "label": label,
-            "weekBand": week_band(week),
-        }
+        {"date": d, "day": day, "week": week, "type": typ, "label": label, "weekBand": week_band(week)}
         for d, day, week, typ, label in SCHEDULE_ROWS
     ]
-    data["source"] = {
-        "programMd": "/workspace/arnold/program.md",
-        "sessionExample": "/workspace/arnold/sessions/2026-09-25.md",
-        "builtBy": "build_program.py",
-    }
+    data["source"] = {"programMd": "/workspace/arnold/program.md",
+                      "sessionExample": "/workspace/arnold/sessions/2026-09-25.md"}
     return data
 
 
 def main() -> None:
-    data = build()
-    OUT.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {OUT} ({len(data['schedule'])} sessions, {len(data['calfLevels'])} calf levels)")
+    write(build(), "program-ron.json")
+    import build_program_cindy
+    build_program_cindy.main()
 
 
 if __name__ == "__main__":

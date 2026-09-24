@@ -1,0 +1,1336 @@
+{
+  "person": "cindy",
+  "displayName": "Cindy",
+  "athlete": "Cindy Weaver",
+  "timezone": "America/New_York",
+  "conditions": "LEFT plantar fasciitis (first-step heel pain 5/10 baseline) · LEFT TKA ~2.5 yrs ago (no surgeon limits) · RIGHT knee OA (1/10 typical, 2/10 after pickleball)",
+  "programWindow": "Sun Sep 27 – Fri Nov 20, 2026 · Sun/Tue/Fri · 24 sessions",
+  "startDate": "2026-09-27",
+  "endDate": "2026-11-20",
+  "disclaimer": "Educational training plan, not a medical diagnosis or prescription. Stop and see a doctor for any red-flag symptoms.",
+  "banner": "Heel & knee pain ≤2–3/10, settled within 24 h, first-step heel pain no worse than baseline (5/10). Knee over 2nd toe, slow. Stop for locking, giving way, hot swollen knee, numbness, calf swelling.",
+  "painRules": {
+    "ceiling": 3,
+    "pass": "Pain ≤2–3/10 during AND settles within 24 h AND first-step heel pain no worse than baseline (5/10 or current usual if lower)",
+    "hold": "Pain >3 during, OR not settled in 24 h, OR first-step worse, OR knee more swollen → HOLD PF level / reduce knee load; DROP a PF level after 2 fails",
+    "advance": "2–3 consecutive PASS sessions to advance a PF level",
+    "kneeBand": "Knee band moves up every 2 weeks only if most sessions in the band were PASS; otherwise repeat the band",
+    "pickleball": "Pickleball = heel load. If first-step pain ≥7/10 (2+ above baseline) for 2 days, HOLD PF level and trim court time first",
+    "quality": "GLA:D quality: knee over 2nd toe, pelvis level, slow control. If form breaks, reduce load/range before adding weight"
+  },
+  "redFlags": [
+    "Heel pain worse at rest/night or not matching the usual first-step pattern",
+    "Numbness, tingling, or burning in the foot/heel",
+    "Calf swelling, warmth, redness, or new deep calf pain (possible clot)",
+    "Knee locking, giving way, or a hot, swollen knee",
+    "Pain or instability in the replaced (left) knee",
+    "Sudden pop in heel/arch with sharp pain or bruising",
+    "Fever, feeling unwell, chest pain, or shortness of breath"
+  ],
+  "sessionTypes": {
+    "H": "PF level + Knee band + Hips/Glutes",
+    "S": "PF level + Knee band (◆ only) + Shoulders",
+    "M": "PF level + Knee band + Mixed (2 hip + 2 shoulder)",
+    "R": "Week 8 reassessment (light PF + tests)"
+  },
+  "optionalTypes": [],
+  "notes": [
+    "PF (left heel) = symptom-based levels 0–5. Start Level 0; stay double-leg through Level 3; don't skip levels.",
+    "Knee bands A–D move every 2 weeks if sessions PASS. No high-impact, no deep kneeling, no deep loaded knee flexion early.",
+    "Keep her playing: gym sessions on lighter/no-pickleball days or AFTER play – never heavy heel/knee work right before play.",
+    "Pickleball = heel load: log first-step heel pain the morning after play. ≥7/10 two days running → hold PF level, trim court time first.",
+    "DiGiovanni stretch daily (incl. rest days), first set before first steps. Supportive shoes; no barefoot on hard floors.",
+    "Week 8 success marker: first-step heel pain ≤3/10 (baseline 5/10).",
+    "† = answer-dependent: progress only per the note on that exercise."
+  ],
+  "pain": {
+    "title": "Heel/foot + knee pain trend",
+    "ceiling": 3,
+    "fields": [
+      {
+        "key": "heelDuring",
+        "label": "Heel/foot pain during session",
+        "short": "Heel (during)",
+        "when": "during",
+        "color": "#7b3f8c"
+      },
+      {
+        "key": "kneeDuring",
+        "label": "Knee pain during session",
+        "short": "Knee (during)",
+        "when": "during",
+        "color": "#1d6fa5"
+      },
+      {
+        "key": "firstStep",
+        "label": "First-step heel pain next morning",
+        "short": "First-step heel (AM)",
+        "when": "morning",
+        "color": "#c45c26",
+        "baseline": 5,
+        "goal": 3
+      },
+      {
+        "key": "kneeMorning",
+        "label": "Knee pain next morning",
+        "short": "Knee (next AM)",
+        "when": "morning",
+        "color": "#6b7280"
+      }
+    ]
+  },
+  "levelSystem": {
+    "key": "pf",
+    "label": "PF level",
+    "short": "PF L",
+    "advanceRule": "Advance after 2–3 consecutive PASS sessions (pain ≤2–3/10, settled in 24 h, first-step heel pain not worse). Stay double-leg through Level 3.",
+    "levels": [
+      {
+        "level": 0,
+        "name": "Gentle activation",
+        "estimate": "Weeks 1–2",
+        "entry": "Heel pain present; no red flags.",
+        "exit": "Pain ≤2–3/10; first-step pain not worse; exercises feel easy. Advance after 2–3 PASS.",
+        "exercises": [
+          {
+            "id": "pf0-seated-raise",
+            "name": "Seated heel raises (both feet)",
+            "sets": "2",
+            "load": "Bodyweight · 2-1-2",
+            "notes": "Knees bent ~90°.",
+            "reps": "15"
+          },
+          {
+            "id": "pf0-short-foot",
+            "name": "Short foot (arch doming), seated",
+            "sets": "5",
+            "load": "Gentle",
+            "notes": "Shorten the foot without curling the toes.",
+            "hold": "5 s"
+          },
+          {
+            "id": "pf0-toe-yoga",
+            "name": "Toe yoga",
+            "sets": "2",
+            "load": "Slow",
+            "notes": "Big toe up / others down, then switch. Seated.",
+            "reps": "10"
+          },
+          {
+            "id": "pf0-towel",
+            "name": "Towel curls, seated",
+            "sets": "2",
+            "load": "Easy",
+            "notes": "Scrunch a towel toward the heel.",
+            "hold": "30–45 s"
+          },
+          {
+            "id": "pf0-calf-stretch",
+            "name": "Gentle wall calf stretch (straight + bent knee)",
+            "sets": "2",
+            "load": "Comfortable",
+            "notes": "No bouncing.",
+            "hold": "30 s each"
+          }
+        ]
+      },
+      {
+        "level": 1,
+        "name": "Loaded seated + supported standing",
+        "estimate": "Weeks 2–3",
+        "entry": "Level 0 exit met.",
+        "exit": "2–3 PASS; 3×15 seated raises at 20 lb and 2×10 standing raises comfortable.",
+        "exercises": [
+          {
+            "id": "pf1-seated-calf",
+            "name": "Seated calf raise (soleus)",
+            "sets": "3",
+            "load": "10–20 lb DB on knees · 2-1-2",
+            "notes": "Both feet.",
+            "reps": "12–15"
+          },
+          {
+            "id": "pf1-standing-dl",
+            "name": "Standing double-leg heel raise, flat floor",
+            "sets": "2",
+            "load": "Bodyweight · 2-1-2",
+            "notes": "Hands on counter/rack.",
+            "reps": "10"
+          },
+          {
+            "id": "pf1-short-foot",
+            "name": "Short foot, standing",
+            "sets": "5",
+            "load": "Gentle",
+            "notes": "Both feet.",
+            "hold": "5 s"
+          },
+          {
+            "id": "pf1-towel-yoga",
+            "name": "Towel curls or toe yoga",
+            "sets": "2",
+            "load": "—",
+            "notes": "Pick one.",
+            "reps": "10 / 30 s"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Standing double-leg strength",
+        "estimate": "Weeks 3–4",
+        "entry": "Level 1 exit met.",
+        "exit": "2–3 PASS; 3×15 standing DL raises through full range with control.",
+        "exercises": [
+          {
+            "id": "pf2-dl-straight",
+            "name": "Standing DL heel raise (straight knee)",
+            "sets": "3",
+            "load": "Bodyweight · 3-0-3",
+            "notes": "Light hand support.",
+            "reps": "12–15"
+          },
+          {
+            "id": "pf2-dl-bent",
+            "name": "Standing DL heel raise (bent knee ~20–30°)",
+            "sets": "3",
+            "load": "Bodyweight · 3-0-3",
+            "notes": "Soleus bias; knees over toes.",
+            "reps": "10–12"
+          },
+          {
+            "id": "pf2-seated-calf",
+            "name": "Seated calf raise",
+            "sets": "3",
+            "load": "20–30 lb · 2-1-2",
+            "notes": "",
+            "reps": "12"
+          },
+          {
+            "id": "pf2-short-foot",
+            "name": "Short foot, standing (hold during raise set-up)",
+            "sets": "5",
+            "load": "—",
+            "notes": "",
+            "hold": "5 s"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Double-leg Rathleff-style raise (towel under toes)",
+        "estimate": "Weeks 4–5",
+        "entry": "Level 2 exit met.",
+        "exit": "2–3 PASS; 3×12 towel raises with some load; first-step pain stable or improving.",
+        "exercises": [
+          {
+            "id": "pf3-rathleff-dl",
+            "name": "DL heel raise on step edge, rolled towel under toes",
+            "sets": "3",
+            "load": "Bodyweight → light backpack",
+            "notes": "3 s up, 2 s hold, 3 s down. Heels drop only to comfortable depth.",
+            "reps": "12",
+            "cues": "3-2-3 tempo."
+          },
+          {
+            "id": "pf3-bent-knee",
+            "name": "Bent-knee DL heel raise",
+            "sets": "3",
+            "load": "Hold 10–15 lb DB · 3-0-3",
+            "notes": "",
+            "reps": "12"
+          },
+          {
+            "id": "pf3-seated-calf",
+            "name": "Seated calf raise",
+            "sets": "3",
+            "load": "30 lb · 2-1-2",
+            "notes": "",
+            "reps": "12"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Single-leg transition (assisted)",
+        "estimate": "Weeks 5–6",
+        "entry": "Level 3 exit met.",
+        "exit": "2–3 PASS; 3×12 unassisted SL towel raises on the left, pain ≤2–3/10.",
+        "exercises": [
+          {
+            "id": "pf4-rathleff-sl-l",
+            "name": "Rathleff heel raise (LEFT), assisted",
+            "sets": "3",
+            "load": "Bodyweight · 3-2-3",
+            "notes": "Towel under toes, step edge; right foot helps lightly. Wean off assist over sessions.",
+            "reps": "12RM",
+            "flag": "†",
+            "flagNote": "Heel irritability and balance – stays double-leg if first-step pain is high."
+          },
+          {
+            "id": "pf4-sl-r",
+            "name": "Right side for balance",
+            "sets": "3",
+            "load": "3-2-3",
+            "notes": "Match both sides.",
+            "reps": "12"
+          },
+          {
+            "id": "pf4-bent-knee",
+            "name": "Bent-knee heel raise (DL)",
+            "sets": "3",
+            "load": "15–20 lb · 3-0-3",
+            "notes": "",
+            "reps": "12"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "name": "Full Rathleff high-load protocol",
+        "estimate": "Weeks 6–8+",
+        "entry": "Level 4 exit met.",
+        "exit": "Maintain 2–3×/week; first-step pain ≤3/10 (success marker); pickleball weeks tolerated without flare.",
+        "exercises": [
+          {
+            "id": "pf5-rathleff",
+            "name": "Rathleff SL heel raise (towel, step edge)",
+            "sets": "3 / 4 / 5",
+            "load": "Backpack or DB in same-side hand",
+            "notes": "Stage 5a 3×12RM → 5b 4×10RM → 5c 5×8RM. 3 s up / 2 s hold / 3 s down. Move stages only after 2–3 PASS at each. Log your stage in the note.",
+            "reps": "12RM / 10RM / 8RM",
+            "flag": "†",
+            "flagNote": "Heel irritability and balance – stays double-leg if first-step pain is high."
+          },
+          {
+            "id": "pf5-soleus",
+            "name": "Bent-knee soleus raise",
+            "sets": "3",
+            "load": "Moderate",
+            "notes": "Keep one bent-knee soleus exercise.",
+            "reps": "12"
+          }
+        ]
+      }
+    ]
+  },
+  "blocks": {
+    "knee": {
+      "label": "Knees",
+      "keyField": "kneeBand",
+      "bands": {
+        "A": [
+          {
+            "id": "ka-sts-high",
+            "name": "Sit-to-stand, HIGH seat (chair + cushion)",
+            "sets": "3",
+            "load": "3 s down / 1 s up · BW",
+            "notes": "Knees over 2nd toe; hands free if possible.",
+            "reps": "8",
+            "diamond": true
+          },
+          {
+            "id": "ka-knee-ext",
+            "name": "Seated knee extension, band",
+            "sets": "2",
+            "load": "2-1-3 · light band",
+            "notes": "Band anchored to chair leg.",
+            "reps": "10/side",
+            "diamond": true
+          },
+          {
+            "id": "ka-ham-curl",
+            "name": "Standing hamstring curl, band",
+            "sets": "2",
+            "load": "2-1-2 · light band",
+            "notes": "Hold counter.",
+            "reps": "10/side"
+          },
+          {
+            "id": "ka-wall-sit",
+            "name": "Wall sit, shallow (~30–45°)",
+            "sets": "3",
+            "load": "Isometric",
+            "notes": "Pain ≤2–3/10.",
+            "hold": "20 s"
+          }
+        ],
+        "B": [
+          {
+            "id": "kb-sts",
+            "name": "Sit-to-stand, standard chair",
+            "sets": "3",
+            "load": "3-0-1 · BW → 10 lb goblet",
+            "notes": "",
+            "reps": "10",
+            "diamond": true
+          },
+          {
+            "id": "kb-stepup-low",
+            "name": "Step-up, low step (~4–6\")",
+            "sets": "2",
+            "load": "Controlled",
+            "notes": "Rail/wall support; knee over foot.",
+            "reps": "8/side"
+          },
+          {
+            "id": "kb-knee-ext",
+            "name": "Seated knee extension, band",
+            "sets": "3",
+            "load": "2-1-3 · medium band",
+            "notes": "",
+            "reps": "12/side",
+            "diamond": true
+          },
+          {
+            "id": "kb-ham-curl",
+            "name": "Hamstring curl, band (standing or seated)",
+            "sets": "3",
+            "load": "2-1-2",
+            "notes": "",
+            "reps": "10/side"
+          },
+          {
+            "id": "kb-wall-sit",
+            "name": "Wall sit or Spanish squat (~45°)",
+            "sets": "3",
+            "load": "Isometric",
+            "notes": "Spanish squat: band around rack post (Fayetteville).",
+            "hold": "30 s"
+          }
+        ],
+        "C": [
+          {
+            "id": "kc-box-squat",
+            "name": "Box squat to bench",
+            "sets": "3",
+            "load": "3-1-1 · 10–15 lb goblet",
+            "notes": "Touch bench lightly, don't collapse.",
+            "reps": "8",
+            "diamond": true,
+            "flag": "†",
+            "flagNote": "No TKA limits; depth set by right-knee OA tolerance (next-day response)."
+          },
+          {
+            "id": "kc-stepup",
+            "name": "Step-up, low → higher step (~6–8\")",
+            "sets": "3",
+            "load": "BW → 10 lb DBs",
+            "notes": "Controlled.",
+            "reps": "8/side",
+            "flag": "†",
+            "flagNote": "Stairs mildly bother the right OA knee – progress height only if next-day knee pain ≤2/10."
+          },
+          {
+            "id": "kc-knee-ext",
+            "name": "Seated knee extension, band or DB between feet",
+            "sets": "3",
+            "load": "2-1-3 · heavier band",
+            "notes": "",
+            "reps": "12",
+            "diamond": true
+          },
+          {
+            "id": "kc-ham-curl",
+            "name": "Hamstring curl, band",
+            "sets": "3",
+            "load": "2-1-2",
+            "notes": "",
+            "reps": "12/side"
+          },
+          {
+            "id": "kc-spanish",
+            "name": "Spanish squat / wall sit",
+            "sets": "4",
+            "load": "Isometric",
+            "notes": "",
+            "hold": "30–45 s"
+          }
+        ],
+        "D": [
+          {
+            "id": "kd-goblet",
+            "name": "Goblet squat to comfortable depth (≈ bench height)",
+            "sets": "3",
+            "load": "3-1-1 · 15–20 lb",
+            "notes": "Knees over toes; stop before pain. Not deep.",
+            "reps": "8",
+            "diamond": true,
+            "flag": "†",
+            "flagNote": "No TKA limits; depth set by right-knee OA tolerance (next-day response)."
+          },
+          {
+            "id": "kd-stepup",
+            "name": "Step-up, 8\"",
+            "sets": "3",
+            "load": "10–15 lb DBs",
+            "notes": "",
+            "reps": "8/side",
+            "flag": "†",
+            "flagNote": "Stairs mildly bother the right OA knee – progress height only if next-day knee pain ≤2/10."
+          },
+          {
+            "id": "kd-stepdown",
+            "name": "Forward step-down, low step",
+            "sets": "2",
+            "load": "Slow 3 s lower",
+            "notes": "Knee-over-foot control.",
+            "reps": "6/side",
+            "flag": "†",
+            "flagNote": "Stairs mildly bother the right OA knee – progress height only if next-day knee pain ≤2/10."
+          },
+          {
+            "id": "kd-knee-ext",
+            "name": "Knee extension (band/DB)",
+            "sets": "3",
+            "load": "2-1-3",
+            "notes": "",
+            "reps": "12",
+            "diamond": true
+          },
+          {
+            "id": "kd-ham-curl",
+            "name": "Hamstring curl, band",
+            "sets": "3",
+            "load": "2-1-2",
+            "notes": "",
+            "reps": "12"
+          },
+          {
+            "id": "kd-bike-int",
+            "name": "Bike intervals (finisher)",
+            "sets": "6",
+            "load": "Upright bike",
+            "notes": "",
+            "hold": "30 s moderate / 60 s easy",
+            "optional": true
+          }
+        ]
+      }
+    },
+    "hips": {
+      "label": "Hips / Glutes",
+      "keyField": "weekBand",
+      "bands": {
+        "1-2": [
+          {
+            "id": "ch12-bridge",
+            "name": "Glute bridge",
+            "sets": "2",
+            "load": "Bodyweight",
+            "notes": "2 s squeeze at top.",
+            "reps": "10"
+          },
+          {
+            "id": "ch12-abd",
+            "name": "Side-lying hip abduction",
+            "sets": "2",
+            "load": "Bodyweight",
+            "notes": "Toes forward, slow lower.",
+            "reps": "10/side"
+          },
+          {
+            "id": "ch12-hinge",
+            "name": "Hip hinge with dowel/broomstick",
+            "sets": "2",
+            "load": "Dowel on back",
+            "notes": "Head, upper back, tailbone contact. Learn the pattern.",
+            "reps": "8"
+          },
+          {
+            "id": "ch12-band-abd",
+            "name": "Standing band hip abduction",
+            "sets": "2",
+            "load": "Light band",
+            "notes": "Hold support.",
+            "reps": "10/side"
+          }
+        ],
+        "3-4": [
+          {
+            "id": "ch34-bridge",
+            "name": "Glute bridge",
+            "sets": "3",
+            "load": "BW → band above knees",
+            "notes": "",
+            "reps": "12"
+          },
+          {
+            "id": "ch34-abd",
+            "name": "Side-lying abduction",
+            "sets": "3",
+            "load": "Bodyweight",
+            "notes": "",
+            "reps": "12/side"
+          },
+          {
+            "id": "ch34-latwalk",
+            "name": "Lateral band walk (band above knees)",
+            "sets": "3",
+            "load": "Light band",
+            "notes": "Knees over toes.",
+            "reps": "8 steps each way"
+          },
+          {
+            "id": "ch34-rdl",
+            "name": "Hip hinge → DB RDL",
+            "sets": "3",
+            "load": "Dowel → 10 lb DBs",
+            "notes": "Soft knees, flat back.",
+            "reps": "8"
+          }
+        ],
+        "5-6": [
+          {
+            "id": "ch56-rdl",
+            "name": "DB Romanian deadlift",
+            "sets": "3",
+            "load": "15–20 lb DBs",
+            "notes": "",
+            "reps": "8–10"
+          },
+          {
+            "id": "ch56-slbridge",
+            "name": "Single-leg bridge (or staggered-stance)",
+            "sets": "3",
+            "load": "Bodyweight",
+            "notes": "",
+            "reps": "8/side"
+          },
+          {
+            "id": "ch56-latwalk",
+            "name": "Lateral band walk",
+            "sets": "3",
+            "load": "Medium band",
+            "notes": "",
+            "reps": "10 steps each way"
+          },
+          {
+            "id": "ch56-abd",
+            "name": "Side-lying abduction",
+            "sets": "3",
+            "load": "Light ankle band optional",
+            "notes": "",
+            "reps": "15/side"
+          }
+        ],
+        "7-8": [
+          {
+            "id": "ch78-rdl",
+            "name": "DB RDL",
+            "sets": "3",
+            "load": "20–30 lb DBs",
+            "notes": "Or light barbell if form is excellent.",
+            "reps": "8"
+          },
+          {
+            "id": "ch78-thrust",
+            "name": "Hip thrust (upper back on bench)",
+            "sets": "3",
+            "load": "BW → 20 lb DB on hips",
+            "notes": "Pad under DB.",
+            "reps": "10"
+          },
+          {
+            "id": "ch78-bandwalk",
+            "name": "Band walks (forward + lateral)",
+            "sets": "3",
+            "load": "Medium band",
+            "notes": "",
+            "reps": "10 steps"
+          },
+          {
+            "id": "ch78-sl-stand",
+            "name": "Single-leg stand (balance)",
+            "sets": "3",
+            "load": "Near support",
+            "notes": "Golf/pickleball balance.",
+            "hold": "20–30 s/side"
+          }
+        ]
+      }
+    },
+    "shoulders": {
+      "label": "Shoulders",
+      "keyField": "weekBand",
+      "bands": {
+        "1-2": [
+          {
+            "id": "cs12-er",
+            "name": "Band external rotation (elbow at side, towel roll)",
+            "sets": "2",
+            "load": "Lightest band",
+            "notes": "",
+            "reps": "12/side"
+          },
+          {
+            "id": "cs12-ir",
+            "name": "Band internal rotation",
+            "sets": "2",
+            "load": "Lightest band",
+            "notes": "",
+            "reps": "12/side"
+          },
+          {
+            "id": "cs12-row",
+            "name": "Seated band row",
+            "sets": "2",
+            "load": "Light band",
+            "notes": "Squeeze shoulder blades.",
+            "reps": "12"
+          },
+          {
+            "id": "cs12-wallslide",
+            "name": "Wall slides",
+            "sets": "2",
+            "load": "—",
+            "notes": "Forearms on wall.",
+            "reps": "8"
+          },
+          {
+            "id": "cs12-scaption",
+            "name": "Scaption to shoulder height (thumbs up, slight V)",
+            "sets": "2",
+            "load": "None / water bottles",
+            "notes": "",
+            "reps": "10"
+          }
+        ],
+        "3-4": [
+          {
+            "id": "cs34-erir",
+            "name": "Band ER / IR",
+            "sets": "3",
+            "load": "Light–medium band",
+            "notes": "",
+            "reps": "12/side"
+          },
+          {
+            "id": "cs34-facepull",
+            "name": "Band face pull",
+            "sets": "3",
+            "load": "Light band",
+            "notes": "Anchor at face height.",
+            "reps": "12"
+          },
+          {
+            "id": "cs34-pullapart",
+            "name": "Band pull-apart",
+            "sets": "2",
+            "load": "Light band",
+            "notes": "",
+            "reps": "12"
+          },
+          {
+            "id": "cs34-scaption",
+            "name": "Scaption",
+            "sets": "3",
+            "load": "Water bottles or half-gallon jug",
+            "notes": "",
+            "reps": "10"
+          },
+          {
+            "id": "cs34-wallpush",
+            "name": "Wall push-up",
+            "sets": "2",
+            "load": "Bodyweight",
+            "notes": "",
+            "reps": "8–10"
+          }
+        ],
+        "5-6": [
+          {
+            "id": "cs56-erir",
+            "name": "Band ER / IR",
+            "sets": "3",
+            "load": "Medium band",
+            "notes": "",
+            "reps": "12–15/side"
+          },
+          {
+            "id": "cs56-dbrow",
+            "name": "One-arm DB row (hand on bench)",
+            "sets": "3",
+            "load": "10–15 lb",
+            "notes": "",
+            "reps": "10/side"
+          },
+          {
+            "id": "cs56-facepull",
+            "name": "Face pull",
+            "sets": "3",
+            "load": "Medium band",
+            "notes": "",
+            "reps": "12"
+          },
+          {
+            "id": "cs56-scaption",
+            "name": "Scaption",
+            "sets": "3",
+            "load": "10 lb DBs or gallon jugs",
+            "notes": "Stop at shoulder height.",
+            "reps": "10"
+          },
+          {
+            "id": "cs56-incline-push",
+            "name": "Incline push-up (bench or rack bar)",
+            "sets": "3",
+            "load": "Bodyweight",
+            "notes": "",
+            "reps": "8"
+          }
+        ],
+        "7-8": [
+          {
+            "id": "cs78-er45",
+            "name": "Band ER at 45° abduction",
+            "sets": "3",
+            "load": "Medium band",
+            "notes": "Pain-free.",
+            "reps": "12/side"
+          },
+          {
+            "id": "cs78-dbrow",
+            "name": "DB row",
+            "sets": "3",
+            "load": "15–20 lb",
+            "notes": "",
+            "reps": "10/side"
+          },
+          {
+            "id": "cs78-ohp",
+            "name": "Seated DB overhead press (light)",
+            "sets": "2",
+            "load": "10 lb",
+            "notes": "Pain-free range only.",
+            "reps": "8"
+          },
+          {
+            "id": "cs78-superset",
+            "name": "Face pull + wall slide superset",
+            "sets": "3",
+            "load": "Medium band",
+            "notes": "",
+            "reps": "12 / 8"
+          },
+          {
+            "id": "cs78-chop",
+            "name": "Standing band chop (golf rotation prep)",
+            "sets": "2",
+            "load": "Light band",
+            "notes": "Pivot on feet, soft knees.",
+            "reps": "10/side",
+            "flag": "†",
+            "flagNote": "Standing as written. Any half-kneel version depends on kneeling tolerance on the replaced knee – pad required."
+          }
+        ]
+      }
+    }
+  },
+  "lists": {
+    "daily": {
+      "title": "Daily foot care",
+      "exercises": [
+        {
+          "id": "cd-digiovanni",
+          "name": "DiGiovanni plantar fascia stretch (left)",
+          "sets": "10",
+          "load": "Up to 3×/day",
+          "notes": "Seated, left ankle over right knee, pull toes back until the arch tightens. First set BEFORE first steps in the morning; also at cool-down.",
+          "hold": "10 s",
+          "cues": "Daily, including rest days."
+        }
+      ]
+    },
+    "warmup": {
+      "title": "Warm-up (5 min)",
+      "exercises": [
+        {
+          "id": "cw-bike",
+          "name": "Warm-up: upright bike or brisk walk",
+          "sets": "1",
+          "load": "Easy",
+          "notes": "Bike at Fayetteville; otherwise easy walk in supportive shoes.",
+          "hold": "5 min"
+        }
+      ]
+    },
+    "baseline": {
+      "title": "Baseline tests (end of session)",
+      "exercises": [
+        {
+          "id": "cb-chair-stand",
+          "name": "Baseline: 30-s chair stand (standard chair, arms crossed)",
+          "sets": "1",
+          "load": "BW",
+          "notes": "Record reps.",
+          "reps": "max in 30 s"
+        },
+        {
+          "id": "cb-dl-raise",
+          "name": "Baseline: DL heel raises (3-0-3) to fatigue",
+          "sets": "1",
+          "load": "BW",
+          "notes": "Record reps.",
+          "reps": "max"
+        },
+        {
+          "id": "cb-sl-stand",
+          "name": "Baseline: single-leg stand L / R",
+          "sets": "1",
+          "load": "Near support",
+          "notes": "Record L and R seconds in the note.",
+          "hold": "max 30 s each"
+        },
+        {
+          "id": "cb-first-step",
+          "name": "Baseline: first-step heel pain this morning",
+          "sets": "1",
+          "load": "—",
+          "notes": "Intake baseline 5/10; goal by Week 8 ≤3/10.",
+          "reps": "0–10"
+        }
+      ]
+    },
+    "reassessment": {
+      "title": "Week 8 Reassessment",
+      "exercises": [
+        {
+          "id": "cr-heel",
+          "name": "Heel pain: avg first-step pain, last 7 days",
+          "sets": "1",
+          "load": "—",
+          "notes": "Success marker ≤3/10 (baseline 5/10).",
+          "reps": "0–10"
+        },
+        {
+          "id": "cr-heel-raise",
+          "name": "Heel raise test: max DL (3-0-3) and max SL each side",
+          "sets": "1",
+          "load": "BW",
+          "notes": "",
+          "reps": "max"
+        },
+        {
+          "id": "cr-chair-stand",
+          "name": "30-s chair stand",
+          "sets": "1",
+          "load": "BW",
+          "notes": "Standard chair, arms crossed.",
+          "reps": "max in 30 s"
+        },
+        {
+          "id": "cr-walk",
+          "name": "40-m fast-paced walk (10 m × 4)",
+          "sets": "1",
+          "load": "—",
+          "notes": "Record seconds.",
+          "reps": "time"
+        },
+        {
+          "id": "cr-stepup",
+          "name": "Step-up: highest step 8×/side, good alignment",
+          "sets": "1",
+          "load": "BW",
+          "notes": "",
+          "reps": "8/side"
+        },
+        {
+          "id": "cr-sl-stand",
+          "name": "Single-leg stand each side",
+          "sets": "1",
+          "load": "—",
+          "notes": "",
+          "hold": "max 30 s"
+        },
+        {
+          "id": "cr-shoulders",
+          "name": "Shoulders: band ER 15/side; scaption 10 at current load",
+          "sets": "1",
+          "load": "Band / DB",
+          "notes": "Pain-free.",
+          "reps": "as listed"
+        },
+        {
+          "id": "cr-knee",
+          "name": "Knee check: pain/swelling after + next morning",
+          "sets": "1",
+          "load": "—",
+          "notes": "Note any change in the replaced knee.",
+          "reps": "—"
+        },
+        {
+          "id": "cr-sport",
+          "name": "Sport tolerance + confidence 0–10",
+          "sets": "1",
+          "load": "—",
+          "notes": "Pickleball 5×/wk and golf 2–3×/wk over the last 2 weeks.",
+          "reps": "—"
+        }
+      ]
+    }
+  },
+  "sessionTemplates": {
+    "H": [
+      {
+        "title": "Daily foot care",
+        "source": "list",
+        "list": "daily"
+      },
+      {
+        "title": "Warm-up (5 min)",
+        "source": "list",
+        "list": "warmup"
+      },
+      {
+        "title": "Foot — PF Level {level}: {levelName}",
+        "source": "level"
+      },
+      {
+        "title": "Knees — Band {kneeBand}",
+        "source": "block",
+        "block": "knee"
+      },
+      {
+        "title": "Hips / Glutes (Weeks {weekBand})",
+        "source": "block",
+        "block": "hips"
+      }
+    ],
+    "S": [
+      {
+        "title": "Daily foot care",
+        "source": "list",
+        "list": "daily"
+      },
+      {
+        "title": "Warm-up (5 min)",
+        "source": "list",
+        "list": "warmup"
+      },
+      {
+        "title": "Foot — PF Level {level}: {levelName}",
+        "source": "level"
+      },
+      {
+        "title": "Knees — Band {kneeBand} (◆ items only)",
+        "source": "block",
+        "block": "knee",
+        "filter": "diamond"
+      },
+      {
+        "title": "Shoulders (Weeks {weekBand})",
+        "source": "block",
+        "block": "shoulders"
+      }
+    ],
+    "M": [
+      {
+        "title": "Daily foot care",
+        "source": "list",
+        "list": "daily"
+      },
+      {
+        "title": "Warm-up (5 min)",
+        "source": "list",
+        "list": "warmup"
+      },
+      {
+        "title": "Foot — PF Level {level}: {levelName}",
+        "source": "level"
+      },
+      {
+        "title": "Knees — Band {kneeBand}",
+        "source": "block",
+        "block": "knee"
+      },
+      {
+        "title": "Mixed — Hips (first 2, Weeks {weekBand})",
+        "source": "block",
+        "block": "hips",
+        "first": 2
+      },
+      {
+        "title": "Mixed — Shoulders (first 2, Weeks {weekBand})",
+        "source": "block",
+        "block": "shoulders",
+        "first": 2
+      }
+    ],
+    "R": [
+      {
+        "title": "Daily foot care",
+        "source": "list",
+        "list": "daily"
+      },
+      {
+        "title": "Light PF — Level {level} (first 2)",
+        "source": "level",
+        "first": 2
+      },
+      {
+        "title": "Week 8 Reassessment",
+        "source": "list",
+        "list": "reassessment"
+      }
+    ]
+  },
+  "answerDependent": [
+    {
+      "exercise": "Goblet squat / box squat depth",
+      "why": "No surgeon limits on the TKA. Depth is set by right-knee OA tolerance (next-day response)"
+    },
+    {
+      "exercise": "Step-ups 8\" and step-downs",
+      "why": "Stairs are mildly bothersome for the right OA knee. Progress height only if next-day pain ≤2/10"
+    },
+    {
+      "exercise": "Any half-kneel (e.g., band chops)",
+      "why": "Kneeling tolerance on the replaced knee; pad required"
+    },
+    {
+      "exercise": "Rathleff SL heel raise (Level 4–5)",
+      "why": "Heel irritability and balance; stays DL if first-step pain is high"
+    },
+    {
+      "exercise": "Treadmill incline / walking volume",
+      "why": "Current walking tolerance and first-step pain"
+    },
+    {
+      "exercise": "Pickleball volume/intensity",
+      "why": "Already playing 5×/week with no TKA limits. Adjust by the next-morning first-step heel pain rule"
+    }
+  ],
+  "conditioningNotes": [
+    "Upright bike: best low-impact option; 5-min warm-up each session, +10–15 min easy on non-training days if wanted.",
+    "Walking: supportive shoes, flat routes, build ~5 min/week if first-step pain stays stable.",
+    "Treadmill: walking only, no incline early; small incline after PF Level 3 (†).",
+    "Assault bike: optional from Week 5, short easy bouts.",
+    "Pickleball is her main conditioning – no extra running/jumping this block."
+  ],
+  "schedule": [
+    {
+      "date": "2026-09-27",
+      "day": "Sun",
+      "week": 1,
+      "type": "H",
+      "label": "H — Session 1 (PF Level 0 start; record baseline)",
+      "weekBand": "1-2",
+      "kneeBand": "A",
+      "extras": [
+        "baseline"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "day": "Tue",
+      "week": 1,
+      "type": "S",
+      "label": "S",
+      "weekBand": "1-2",
+      "kneeBand": "A"
+    },
+    {
+      "date": "2026-10-02",
+      "day": "Fri",
+      "week": 1,
+      "type": "M",
+      "label": "M",
+      "weekBand": "1-2",
+      "kneeBand": "A"
+    },
+    {
+      "date": "2026-10-04",
+      "day": "Sun",
+      "week": 2,
+      "type": "H",
+      "label": "H",
+      "weekBand": "1-2",
+      "kneeBand": "A"
+    },
+    {
+      "date": "2026-10-06",
+      "day": "Tue",
+      "week": 2,
+      "type": "S",
+      "label": "S",
+      "weekBand": "1-2",
+      "kneeBand": "A"
+    },
+    {
+      "date": "2026-10-09",
+      "day": "Fri",
+      "week": 2,
+      "type": "M",
+      "label": "M",
+      "weekBand": "1-2",
+      "kneeBand": "A"
+    },
+    {
+      "date": "2026-10-11",
+      "day": "Sun",
+      "week": 3,
+      "type": "H",
+      "label": "H",
+      "weekBand": "3-4",
+      "kneeBand": "B"
+    },
+    {
+      "date": "2026-10-13",
+      "day": "Tue",
+      "week": 3,
+      "type": "S",
+      "label": "S",
+      "weekBand": "3-4",
+      "kneeBand": "B"
+    },
+    {
+      "date": "2026-10-16",
+      "day": "Fri",
+      "week": 3,
+      "type": "M",
+      "label": "M",
+      "weekBand": "3-4",
+      "kneeBand": "B"
+    },
+    {
+      "date": "2026-10-18",
+      "day": "Sun",
+      "week": 4,
+      "type": "H",
+      "label": "H",
+      "weekBand": "3-4",
+      "kneeBand": "B"
+    },
+    {
+      "date": "2026-10-20",
+      "day": "Tue",
+      "week": 4,
+      "type": "S",
+      "label": "S",
+      "weekBand": "3-4",
+      "kneeBand": "B"
+    },
+    {
+      "date": "2026-10-23",
+      "day": "Fri",
+      "week": 4,
+      "type": "M",
+      "label": "M",
+      "weekBand": "3-4",
+      "kneeBand": "B"
+    },
+    {
+      "date": "2026-10-25",
+      "day": "Sun",
+      "week": 5,
+      "type": "H",
+      "label": "H",
+      "weekBand": "5-6",
+      "kneeBand": "C"
+    },
+    {
+      "date": "2026-10-27",
+      "day": "Tue",
+      "week": 5,
+      "type": "S",
+      "label": "S",
+      "weekBand": "5-6",
+      "kneeBand": "C"
+    },
+    {
+      "date": "2026-10-30",
+      "day": "Fri",
+      "week": 5,
+      "type": "M",
+      "label": "M",
+      "weekBand": "5-6",
+      "kneeBand": "C"
+    },
+    {
+      "date": "2026-11-01",
+      "day": "Sun",
+      "week": 6,
+      "type": "H",
+      "label": "H",
+      "weekBand": "5-6",
+      "kneeBand": "C"
+    },
+    {
+      "date": "2026-11-03",
+      "day": "Tue",
+      "week": 6,
+      "type": "S",
+      "label": "S",
+      "weekBand": "5-6",
+      "kneeBand": "C"
+    },
+    {
+      "date": "2026-11-06",
+      "day": "Fri",
+      "week": 6,
+      "type": "M",
+      "label": "M",
+      "weekBand": "5-6",
+      "kneeBand": "C"
+    },
+    {
+      "date": "2026-11-08",
+      "day": "Sun",
+      "week": 7,
+      "type": "H",
+      "label": "H",
+      "weekBand": "7-8",
+      "kneeBand": "D"
+    },
+    {
+      "date": "2026-11-10",
+      "day": "Tue",
+      "week": 7,
+      "type": "S",
+      "label": "S",
+      "weekBand": "7-8",
+      "kneeBand": "D"
+    },
+    {
+      "date": "2026-11-13",
+      "day": "Fri",
+      "week": 7,
+      "type": "M",
+      "label": "M",
+      "weekBand": "7-8",
+      "kneeBand": "D"
+    },
+    {
+      "date": "2026-11-15",
+      "day": "Sun",
+      "week": 8,
+      "type": "H",
+      "label": "H",
+      "weekBand": "7-8",
+      "kneeBand": "D"
+    },
+    {
+      "date": "2026-11-17",
+      "day": "Tue",
+      "week": 8,
+      "type": "S",
+      "label": "S",
+      "weekBand": "7-8",
+      "kneeBand": "D"
+    },
+    {
+      "date": "2026-11-20",
+      "day": "Fri",
+      "week": 8,
+      "type": "R",
+      "label": "R — Week 8 reassessment (Session 24; light PF + tests)",
+      "weekBand": "7-8",
+      "kneeBand": "D"
+    }
+  ],
+  "source": {
+    "programMd": "/workspace/arnold/cindy/program.md",
+    "sessionExample": "/workspace/arnold/cindy/sessions/2026-09-27.md"
+  }
+}

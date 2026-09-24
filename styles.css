@@ -340,3 +340,35 @@ input:focus, select:focus, textarea:focus {
 @media (min-width: 600px) {
   main { padding-top: 18px; }
 }
+
+/* ---- v2: two-person ---- */
+body[data-active-person="cindy"] { --accent: #6d2f7e; }
+body[data-active-person="cindy"] .chip.accent { background: #efe1f3; color: #6d2f7e; }
+.header-row { display: flex; align-items: center; gap: 10px; }
+.header-title { flex: 1; min-width: 0; }
+.header-title .sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.person-switch {
+  display: flex; background: rgba(255,255,255,.18); border-radius: 999px; padding: 3px; flex-shrink: 0;
+}
+.person-switch button {
+  min-height: 44px; min-width: 70px; border: 0; border-radius: 999px; background: transparent;
+  color: #fff; font-size: 1rem; font-weight: 750; font-family: inherit; cursor: pointer; padding: 0 12px;
+}
+.person-switch button.on { background: #fff; color: var(--accent); box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+.app-header { background: var(--accent); transition: background .2s; }
+.btn.small { min-height: 40px; padding: 6px 10px; font-size: .85rem; }
+.chip.danger { background: #fee2e2; color: #b91c1c; }
+.ex-flag { font-size: .82rem; color: #9a3412; background: #fff7ed; border-radius: 8px; padding: 6px 8px; margin: 0 0 8px; }
+.exercise.locked { opacity: .6; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: .78rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 14px; height: 4px; border-radius: 2px; display: inline-block; }
+.legend i.dash { height: 0; border-top: 2px dashed; background: none; }
+.stat .of { font-size: 1rem; color: var(--muted); font-weight: 700; }
+.level-info { background: #f8f5ef; border-radius: 10px; padding: 8px 10px; font-size: .85rem; }
+.notes { padding-left: 18px; margin: 6px 0; font-size: .88rem; color: #333; }
+.notes li { margin-bottom: 4px; }
+.btn.recent { margin-bottom: 6px; justify-content: space-between; font-size: .9rem; }
+.week-list .btn { text-align: left; }
+.pain-field { margin-bottom: 4px; }
+#prev-day, #next-day { flex: 0 0 56px; font-size: 1.5rem; }

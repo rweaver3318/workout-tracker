@@ -1,7 +1,7 @@
 {
-  "name": "Ron Workout — Calf Rehab",
-  "short_name": "Ron Workout",
-  "description": "8-week calf rehab + strength tracker for Ron Weaver",
+  "name": "Weaver Workout — Ron & Cindy",
+  "short_name": "Weaver Workout",
+  "description": "8-week rehab + strength tracker for Ron and Cindy Weaver",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
