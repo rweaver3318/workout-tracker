@@ -25,7 +25,7 @@
   "sessionTypes": {
     "H": "Calf (current level) + Hips/Glutes",
     "S": "Calf (current level) + Shoulders/Upper body",
-    "C": "Optional calf isometrics/ROM or light conditioning + mobility",
+    "C": "Optional calf isometrics or light conditioning + mobility",
     "R": "Week 8 reassessment"
   },
   "optionalTypes": [
@@ -33,9 +33,9 @@
   ],
   "notes": [
     "Calf is the MAIN focus: criteria-based levels, start Level 0, do not skip.",
-    "Hip update (Sep 24): right anterior THA, no restrictions – hip-dependent (*) exercises unlocked on normal progression; build end-range extension + ER gradually.",
+    "Hip update (Sep 24): right anterior THA, no restrictions – hip-dependent (*) exercises unlocked on normal progression; build end-range extension + external rotation gradually.",
     "Both issues are RIGHT side: right-leg moves that load the calf (push-off, back-leg split squat, toe step-ups, lunges) must match the calf level. Flat foot / weight through heel until calf Level 3+.",
-    "Air squat → goblet squat (10–30 lb DB, flat-footed, heels down) from Session 1, progressing weekly.",
+    "Air squat → goblet squat (10–30 lb dumbbell, flat-footed, heels down) from Session 1, progressing weekly.",
     "Split squats, sumo squats, lunges: HOLD until calf Level 2+ AND a one-set pain-free test (calf ≤2/10 during, no worse next morning).",
     "Keep hip and shoulder volume modest so calf work gets priority."
   ],
@@ -74,7 +74,7 @@
         "exercises": [
           {
             "id": "c0-arom",
-            "name": "Seated AROM PF ↔ DF",
+            "name": "Seated ankle point and flex (toes down, then toes up)",
             "sets": "2",
             "load": "Bodyweight",
             "notes": "Knee bent ~90°. Slow, pain-free. No forcing stretch.",
@@ -83,7 +83,7 @@
           },
           {
             "id": "c0-iso-bent",
-            "name": "Seated PF isometric (bent knee)",
+            "name": "Seated calf hold (knee bent)",
             "sets": "5",
             "load": "20–40% effort",
             "notes": "Ball of foot into floor or light band. Rest 30–45 s. Stop if pain >3/10.",
@@ -119,7 +119,7 @@
         "exercises": [
           {
             "id": "c1-iso-bent",
-            "name": "Seated bent-knee PF isometric",
+            "name": "Seated calf hold (knee bent)",
             "sets": "5",
             "load": "~40–50% effort",
             "notes": "Rest between holds. Pain ≤3.",
@@ -127,7 +127,7 @@
           },
           {
             "id": "c1-iso-straight",
-            "name": "Seated straight-knee PF isometric (gastroc bias)",
+            "name": "Seated calf hold (knee straight)",
             "sets": "4",
             "load": "~30–40% effort",
             "notes": "Keep very gentle.",
@@ -144,7 +144,7 @@
           },
           {
             "id": "c1-arom",
-            "name": "Continue AROM",
+            "name": "Continue seated ankle point and flex",
             "sets": "2",
             "load": "Bodyweight",
             "notes": "Pain-free range.",
@@ -161,12 +161,12 @@
         "exercises": [
           {
             "id": "c2-seated-raise",
-            "name": "Seated calf raise (DB on knees or band)",
+            "name": "Seated calf raise (dumbbell on knees or band)",
             "sets": "3",
             "load": "10–20 lb total to start",
-            "notes": "Tempo 2-1-2.",
+            "notes": "Tempo: 2 seconds up, hold 1, 2 seconds down.",
             "reps": "12–15",
-            "cues": "Slow: 2 up, 1 hold, 2 down."
+            "cues": "Slow: 2 seconds up, hold 1, 2 seconds down."
           },
           {
             "id": "c2-iso-finisher",
@@ -192,14 +192,14 @@
         "name": "Double-leg standing calf raises",
         "estimate": "~Weeks 3–4",
         "entry": "Level 2 exit; single-leg balance 10 s ok with support nearby.",
-        "exit": "2–3 PASS; 3×15 DL raises through near-full ROM, next-day ok.",
+        "exit": "2–3 PASS; 3×15 double-leg raises through near-full range of motion, next-day ok.",
         "exercises": [
           {
             "id": "c3-dl-raise",
-            "name": "DL standing calf raise (floor → step)",
+            "name": "Double-leg standing calf raise (floor → step)",
             "sets": "3",
-            "load": "Bodyweight → light DB",
-            "notes": "Tempo 2-1-2. Progress to step for more ROM when ready.",
+            "load": "Bodyweight → light dumbbell",
+            "notes": "Tempo: 2 seconds up, hold 1, 2 seconds down. Progress to step for more range of motion when ready.",
             "reps": "12–15"
           },
           {
@@ -225,15 +225,15 @@
         "level": 4,
         "name": "Single-leg strength endurance",
         "estimate": "~Weeks 4–5",
-        "entry": "Level 3 exit; DL raises easy.",
-        "exit": "≥25 SL calf raises on right at ≥90% of left quality/count, pain ≤3, no next-morning flare.",
+        "entry": "Level 3 exit; double-leg raises easy.",
+        "exit": "≥25 single-leg calf raises on right at ≥90% of left quality/count, pain ≤3, no next-morning flare.",
         "exercises": [
           {
             "id": "c4-sl-raise",
-            "name": "SL calf raise (floor → step)",
+            "name": "Single-leg calf raise (floor → step)",
             "sets": "3",
             "load": "Bodyweight; left assist at top if needed",
-            "notes": "Tempo 2-1-2. Wean assist. Key RTS gate: ≥25 @ ≥90% left.",
+            "notes": "Tempo: 2 seconds up, hold 1, 2 seconds down. Wean assist. Key return-to-sport gate: ≥25 at ≥90% of left.",
             "reps": "work toward 25+",
             "cues": "Quality over rush — match left side."
           },
@@ -247,7 +247,7 @@
           },
           {
             "id": "c4-wall-hold",
-            "name": "Wall SL heel raise holds",
+            "name": "Wall single-leg heel raise holds",
             "sets": "3",
             "load": "Bodyweight",
             "notes": "",
@@ -258,31 +258,31 @@
       },
       {
         "level": 5,
-        "name": "Heavy slow resistance (HSR)",
+        "name": "Heavy slow resistance",
         "estimate": "~Weeks 5–6",
         "entry": "Level 4 exit criteria.",
         "exit": "2–3 PASS at meaningful load; hopping readiness testing pain-free.",
         "exercises": [
           {
             "id": "c5-standing-hsr",
-            "name": "Standing calf raise HSR (barbell/Smith/DB/backpack)",
+            "name": "Standing calf raise with heavy slow resistance (barbell/Smith/dumbbell/backpack)",
             "sets": "3–4",
             "load": "Progress as reps drop toward 6–8",
-            "notes": "3 s up / 3 s down.",
+            "notes": "3 seconds up / 3 seconds down.",
             "reps": "6–15",
             "cues": "Heavy and slow — full control."
           },
           {
             "id": "c5-seated-hsr",
-            "name": "Seated soleus HSR",
+            "name": "Seated soleus heavy slow resistance",
             "sets": "3",
             "load": "Progress load",
-            "notes": "Same 3-3 tempo.",
+            "notes": "Same 3 seconds up / 3 seconds down tempo.",
             "reps": "6–12"
           },
           {
             "id": "c5-step-rom",
-            "name": "Incline/decline step for ROM",
+            "name": "Incline/decline step for range of motion",
             "sets": "3",
             "load": "As controlled",
             "notes": "Once control is solid.",
@@ -295,12 +295,12 @@
         "level": 6,
         "name": "Low-level plyometrics",
         "estimate": "~Weeks 6–7",
-        "entry": "Level 5 exit; SL raises ≥25 @ ≥90% contralateral; pain-free DL and SL hopping in place (start DL).",
-        "exit": "2–3 PASS; SL hop in place 20+ contacts pain-free; confidence high.",
+        "entry": "Level 5 exit; Single-leg raises ≥25 at ≥90% of the other side; pain-free double-leg and single-leg hopping in place (start double-leg).",
+        "exit": "2–3 PASS; single-leg hop in place 20+ contacts pain-free; confidence high.",
         "exercises": [
           {
             "id": "c6-pogos",
-            "name": "Rope or in-place pogos DL",
+            "name": "Rope or in-place double-leg pogos",
             "sets": "3",
             "load": "Bodyweight",
             "notes": "Soft contacts.",
@@ -308,7 +308,7 @@
           },
           {
             "id": "c6-line-hops",
-            "name": "DL line hops forward/back",
+            "name": "Double-leg line hops forward/back",
             "sets": "3",
             "load": "Bodyweight",
             "notes": "",
@@ -316,10 +316,10 @@
           },
           {
             "id": "c6-sl-pogos",
-            "name": "SL pogos",
+            "name": "Single-leg pogos",
             "sets": "3",
             "load": "Bodyweight",
-            "notes": "Only when DL is easy and pain-free.",
+            "notes": "Only when double-leg is easy and pain-free.",
             "reps": "15–20",
             "optional": true
           }
@@ -358,9 +358,9 @@
           },
           {
             "id": "c7-hsr-maint",
-            "name": "HSR calf maintenance",
+            "name": "Heavy slow resistance calf maintenance",
             "sets": "3",
-            "load": "Prior HSR loads",
+            "load": "Prior heavy slow resistance loads",
             "notes": "Continue 2×/week.",
             "reps": "6–10"
           }
@@ -402,7 +402,7 @@
             "id": "h12-squat",
             "name": "Air squat → goblet squat",
             "sets": "3",
-            "load": "BW → goblet 10–15 lb",
+            "load": "bodyweight → goblet 10–15 lb",
             "notes": "Flat feet, heels down, weight through heels. Stop if calf >2/10.",
             "reps": "8–10",
             "cues": "Heels down. Progress load weekly if form clean."
@@ -419,10 +419,10 @@
         "3-4": [
           {
             "id": "h34-bridge",
-            "name": "Bridge with 2 s squeeze",
+            "name": "Bridge with 2-second squeeze",
             "sets": "3",
             "load": "Bodyweight",
-            "notes": "Build end-range extension + ER gradually.",
+            "notes": "Build end-range extension + external rotation gradually.",
             "reps": "12"
           },
           {
@@ -437,15 +437,15 @@
             "id": "h34-stepup",
             "name": "Step-up low step",
             "sets": "3",
-            "load": "Bodyweight → light DB",
+            "load": "Bodyweight → light dumbbell",
             "notes": "Flat foot, drive through the heel – no toe push-off until calf Level 3+.",
             "reps": "8/side"
           },
           {
             "id": "h34-rdl",
-            "name": "Hip hinge / RDL light DB",
+            "name": "Hip hinge / Romanian deadlift with light dumbbell",
             "sets": "3",
-            "load": "Light DB",
+            "load": "Light dumbbell",
             "notes": "Soft knees; normal progression (hip unlocked).",
             "reps": "8"
           },
@@ -453,7 +453,7 @@
             "id": "h34-squat",
             "name": "Goblet squat",
             "sets": "3",
-            "load": "10–30 lb DB",
+            "load": "10–30 lb dumbbell",
             "notes": "Flat-footed, heels down. Progress weekly.",
             "reps": "8–10"
           }
@@ -479,7 +479,7 @@
             "id": "h56-squat",
             "name": "Goblet squat",
             "sets": "3",
-            "load": "10–30 lb DB",
+            "load": "10–30 lb dumbbell",
             "notes": "Flat-footed, heels down. Keep progressing weekly.",
             "reps": "8–10"
           },
@@ -487,7 +487,7 @@
             "id": "h56-split",
             "name": "Split squat",
             "sets": "3",
-            "load": "BW → light DB",
+            "load": "bodyweight → light dumbbell",
             "notes": "Right leg back = calf push-off load; keep it matched to calf level.",
             "reps": "6–8/side",
             "minLevel": 2,
@@ -508,7 +508,7 @@
             "id": "h78-glute",
             "name": "Glute med emphasis (abd / clam / band walk)",
             "sets": "3",
-            "load": "Band / BW",
+            "load": "Band / bodyweight",
             "notes": "Continue 2×/week.",
             "reps": "10–12"
           },
@@ -516,7 +516,7 @@
             "id": "h78-squat",
             "name": "Goblet squat",
             "sets": "3",
-            "load": "up to 30 lb DB",
+            "load": "up to 30 lb dumbbell",
             "notes": "Flat-footed until calf Level 3+.",
             "reps": "8–10"
           },
@@ -524,7 +524,7 @@
             "id": "h78-latlunge",
             "name": "Controlled lateral lunge",
             "sets": "3",
-            "load": "BW → light",
+            "load": "bodyweight → light",
             "notes": "",
             "reps": "6/side",
             "minLevel": 2,
@@ -581,9 +581,9 @@
           },
           {
             "id": "s12-scaption",
-            "name": "Light DB scaption to eye level",
+            "name": "Light dumbbell arm raise at an angle (thumbs up) to eye level",
             "sets": "2",
-            "load": "Light DB",
+            "load": "Light dumbbell",
             "notes": "",
             "reps": "12",
             "optional": true
@@ -592,7 +592,7 @@
         "3-4": [
           {
             "id": "s34-er90",
-            "name": "Band 90/90 ER",
+            "name": "Band 90/90 external rotation",
             "sets": "3",
             "load": "Light",
             "notes": "Only if comfortable.",
@@ -600,9 +600,9 @@
           },
           {
             "id": "s34-dbrow",
-            "name": "DB row (bench supported)",
+            "name": "Dumbbell row (bench supported)",
             "sets": "3",
-            "load": "DB",
+            "load": "dumbbell",
             "notes": "",
             "reps": "10"
           },
@@ -626,7 +626,7 @@
             "id": "s34-farmer",
             "name": "Farmer carry short walks",
             "sets": "3",
-            "load": "Moderate DBs",
+            "load": "Moderate dumbbells",
             "notes": "Watch calf; keep easy until Level 3+.",
             "hold": "20–30 m"
           }
@@ -634,7 +634,7 @@
         "5-6": [
           {
             "id": "s56-cuff",
-            "name": "Cuff / scap work (ER + pull-apart)",
+            "name": "Rotator cuff / shoulder blade work (external rotation + pull-apart)",
             "sets": "3",
             "load": "Band",
             "notes": "",
@@ -642,9 +642,9 @@
           },
           {
             "id": "s56-ohp",
-            "name": "Overhead press light DB (seated ok)",
+            "name": "Overhead press with light dumbbell (seated ok)",
             "sets": "3",
-            "load": "Light DB",
+            "load": "Light dumbbell",
             "notes": "",
             "reps": "8–10"
           },
@@ -676,7 +676,7 @@
           },
           {
             "id": "s78-er-vel",
-            "name": "Slightly higher velocity band ER (controlled)",
+            "name": "Slightly higher velocity band external rotation (controlled)",
             "sets": "3",
             "load": "Band",
             "notes": "Still controlled.",
@@ -701,7 +701,7 @@
       "exercises": [
         {
           "id": "opt-iso",
-          "name": "Gentle calf isometrics / ROM (current level light version)",
+          "name": "Gentle calf isometrics (current level light version)",
           "sets": "3",
           "load": "Very light",
           "notes": "Only if pain rules met. Soft day.",
@@ -738,17 +738,17 @@
         },
         {
           "id": "r-sl-raise",
-          "name": "SL calf raise max reps (R vs L)",
+          "name": "Single-leg calf raise maximum reps (right versus left)",
           "sets": "1",
-          "load": "BW, ~1s up/1s down",
+          "load": "bodyweight, about 1 second up/1 second down",
           "notes": "Cadence controlled.",
           "reps": "max"
         },
         {
           "id": "r-hsr8",
-          "name": "HSR 8RM estimate — standing calf raise",
+          "name": "Heavy slow resistance 8-repetition maximum estimate — standing calf raise",
           "sets": "1",
-          "load": "Find 8RM @ 3-1-3",
+          "load": "Find 8-repetition maximum at 3 seconds up, 1 second hold, 3 seconds down",
           "notes": "",
           "reps": "~8"
         },
@@ -756,9 +756,9 @@
           "id": "r-hop",
           "name": "Hop battery",
           "sets": "1",
-          "load": "BW",
+          "load": "bodyweight",
           "notes": "",
-          "reps": "DL 30s; SL 20/side; triple hop if pain-free"
+          "reps": "double-leg 30 seconds; single-leg 20/side; triple hop if pain-free"
         },
         {
           "id": "r-balance",
@@ -770,17 +770,17 @@
         },
         {
           "id": "r-hip",
-          "name": "Hip screen: STS 10; side-lying abd 15/side",
+          "name": "Hip screen: sit-to-stand 10; side-lying abduction 15/side",
           "sets": "1",
-          "load": "BW",
+          "load": "bodyweight",
           "notes": "Note any precaution limits.",
           "reps": "as listed"
         },
         {
           "id": "r-shoulder",
-          "name": "Shoulder screen: band ER 15/side; scaption 12/side",
+          "name": "Shoulder screen: band external rotation 15/side; arm raise at an angle (thumbs up) 12/side",
           "sets": "1",
-          "load": "Band / light DB",
+          "load": "Band / light dumbbell",
           "notes": "Pain-free.",
           "reps": "as listed"
         },
