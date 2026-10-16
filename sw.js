@@ -1,7 +1,7 @@
 /* Offline cache for Weaver Workout (Ron + Cindy).
    Network-first for same-origin GETs so new deploys show up on the next load;
    falls back to cache when offline. Bump CACHE on every release. */
-const CACHE = "weaver-workout-v4-plain-names";
+const CACHE = "weaver-workout-v5-ron-restart-wk2";
 const ASSETS = [
   "./",
   "./index.html",

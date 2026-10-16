@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  const APP_BUILD = "2026.09.24-two-person";
+  const APP_BUILD = "2026.10.16-ron-restart-wk2";
   const PEOPLE = [
     { id: "ron", label: "Ron", file: "program-ron.json" },
     { id: "cindy", label: "Cindy", file: "program-cindy.json" },
