@@ -4,9 +4,9 @@
   "athlete": "Ron Weaver",
   "timezone": "America/New_York",
   "conditions": "Likely grade 2 RIGHT gastrocnemius tear (Sat Sep 19, 2026) · RIGHT THA Mar 4, 2026 – anterior approach, no surgeon restrictions (Sep 24 update)",
-  "programWindow": "Fri Sep 25 – Fri Dec 4, 2026 (restarted at Week 2 on Fri Oct 16)",
+  "programWindow": "Fri Sep 25 – Mon Dec 7, 2026 (restarted at Week 2 on Fri Oct 16; shifted +3 days from Oct 26 on Thu Oct 29)",
   "startDate": "2026-09-25",
-  "endDate": "2026-12-04",
+  "endDate": "2026-12-07",
   "disclaimer": "Educational training plan, not a medical diagnosis or prescription. Seek medical care for diagnosis, imaging, and clearance before return to sport.",
   "banner": "Calf pain ceiling ≤3/10. Stop for red flags (calf swelling/warmth, pop, night pain, hip instability, SOB).",
   "painRules": {
@@ -921,25 +921,9 @@
       "weekBand": "3-4"
     },
     {
-      "date": "2026-10-26",
-      "day": "Mon",
+      "date": "2026-10-29",
+      "day": "Thu",
       "week": 3,
-      "type": "H",
-      "label": "H",
-      "weekBand": "3-4"
-    },
-    {
-      "date": "2026-10-28",
-      "day": "Wed",
-      "week": 3,
-      "type": "S",
-      "label": "S",
-      "weekBand": "3-4"
-    },
-    {
-      "date": "2026-10-30",
-      "day": "Fri",
-      "week": 4,
       "type": "H",
       "label": "H",
       "weekBand": "3-4"
@@ -947,9 +931,9 @@
     {
       "date": "2026-10-31",
       "day": "Sat",
-      "week": 4,
-      "type": "C",
-      "label": "C (optional)",
+      "week": 3,
+      "type": "S",
+      "label": "S",
       "weekBand": "3-4"
     },
     {
@@ -961,28 +945,28 @@
       "weekBand": "3-4"
     },
     {
-      "date": "2026-11-04",
-      "day": "Wed",
+      "date": "2026-11-03",
+      "day": "Tue",
       "week": 4,
-      "type": "S",
-      "label": "S",
+      "type": "C",
+      "label": "C (optional)",
       "weekBand": "3-4"
     },
     {
-      "date": "2026-11-06",
-      "day": "Fri",
-      "week": 5,
+      "date": "2026-11-05",
+      "day": "Thu",
+      "week": 4,
       "type": "H",
       "label": "H",
-      "weekBand": "5-6"
+      "weekBand": "3-4"
     },
     {
       "date": "2026-11-07",
       "day": "Sat",
-      "week": 5,
-      "type": "C",
-      "label": "C (optional)",
-      "weekBand": "5-6"
+      "week": 4,
+      "type": "S",
+      "label": "S",
+      "weekBand": "3-4"
     },
     {
       "date": "2026-11-09",
@@ -993,17 +977,17 @@
       "weekBand": "5-6"
     },
     {
-      "date": "2026-11-11",
-      "day": "Wed",
+      "date": "2026-11-10",
+      "day": "Tue",
       "week": 5,
-      "type": "S",
-      "label": "S",
+      "type": "C",
+      "label": "C (optional)",
       "weekBand": "5-6"
     },
     {
-      "date": "2026-11-13",
-      "day": "Fri",
-      "week": 6,
+      "date": "2026-11-12",
+      "day": "Thu",
+      "week": 5,
       "type": "H",
       "label": "H",
       "weekBand": "5-6"
@@ -1011,9 +995,9 @@
     {
       "date": "2026-11-14",
       "day": "Sat",
-      "week": 6,
-      "type": "C",
-      "label": "C (optional)",
+      "week": 5,
+      "type": "S",
+      "label": "S",
       "weekBand": "5-6"
     },
     {
@@ -1025,28 +1009,28 @@
       "weekBand": "5-6"
     },
     {
-      "date": "2026-11-18",
-      "day": "Wed",
+      "date": "2026-11-17",
+      "day": "Tue",
       "week": 6,
-      "type": "S",
-      "label": "S",
+      "type": "C",
+      "label": "C (optional)",
       "weekBand": "5-6"
     },
     {
-      "date": "2026-11-20",
-      "day": "Fri",
-      "week": 7,
+      "date": "2026-11-19",
+      "day": "Thu",
+      "week": 6,
       "type": "H",
       "label": "H",
-      "weekBand": "7-8"
+      "weekBand": "5-6"
     },
     {
       "date": "2026-11-21",
       "day": "Sat",
-      "week": 7,
-      "type": "C",
-      "label": "C (optional)",
-      "weekBand": "7-8"
+      "week": 6,
+      "type": "S",
+      "label": "S",
+      "weekBand": "5-6"
     },
     {
       "date": "2026-11-23",
@@ -1057,17 +1041,17 @@
       "weekBand": "7-8"
     },
     {
-      "date": "2026-11-25",
-      "day": "Wed",
+      "date": "2026-11-24",
+      "day": "Tue",
       "week": 7,
-      "type": "S",
-      "label": "S",
+      "type": "C",
+      "label": "C (optional)",
       "weekBand": "7-8"
     },
     {
-      "date": "2026-11-27",
-      "day": "Fri",
-      "week": 8,
+      "date": "2026-11-26",
+      "day": "Thu",
+      "week": 7,
       "type": "H",
       "label": "H",
       "weekBand": "7-8"
@@ -1075,9 +1059,9 @@
     {
       "date": "2026-11-28",
       "day": "Sat",
-      "week": 8,
-      "type": "C",
-      "label": "C (optional)",
+      "week": 7,
+      "type": "S",
+      "label": "S",
       "weekBand": "7-8"
     },
     {
@@ -1089,16 +1073,32 @@
       "weekBand": "7-8"
     },
     {
-      "date": "2026-12-02",
-      "day": "Wed",
+      "date": "2026-12-01",
+      "day": "Tue",
+      "week": 8,
+      "type": "C",
+      "label": "C (optional)",
+      "weekBand": "7-8"
+    },
+    {
+      "date": "2026-12-03",
+      "day": "Thu",
+      "week": 8,
+      "type": "H",
+      "label": "H",
+      "weekBand": "7-8"
+    },
+    {
+      "date": "2026-12-05",
+      "day": "Sat",
       "week": 8,
       "type": "S",
       "label": "S",
       "weekBand": "7-8"
     },
     {
-      "date": "2026-12-04",
-      "day": "Fri",
+      "date": "2026-12-07",
+      "day": "Mon",
       "week": 8,
       "type": "R",
       "label": "R — Week 8 reassessment",

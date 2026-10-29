@@ -21,9 +21,9 @@ PROGRAM = {
     "athlete": "Ron Weaver",
     "timezone": "America/New_York",
     "conditions": "Likely grade 2 RIGHT gastrocnemius tear (Sat Sep 19, 2026) · RIGHT THA Mar 4, 2026 – anterior approach, no surgeon restrictions (Sep 24 update)",
-    "programWindow": "Fri Sep 25 – Fri Dec 4, 2026 (restarted at Week 2 on Fri Oct 16)",
+    "programWindow": "Fri Sep 25 – Mon Dec 7, 2026 (restarted at Week 2 on Fri Oct 16; shifted +3 days from Oct 26 on Thu Oct 29)",
     "startDate": "2026-09-25",
-    "endDate": "2026-12-04",
+    "endDate": "2026-12-07",
     "disclaimer": (
         "Educational training plan, not a medical diagnosis or prescription. "
         "Seek medical care for diagnosis, imaging, and clearance before return to sport."
@@ -493,6 +493,7 @@ REASSESSMENT = [
 ]
 
 SCHEDULE_ROWS = [
+    # Oct 29: Mon Oct 26 session moved to Thu Oct 29; everything after shifted +3 days.
     # Restarted Fri Oct 16, 2026 at Week 2 Day 1 (Ron's request). Old Oct 2–14 rows dropped (nothing logged).
     ("2026-09-25", "Fri", 1, "H", "H — Session 1 (Calf Level 0 start)"),
     ("2026-09-26", "Sat", 1, "C", "C (optional)"),
@@ -504,29 +505,29 @@ SCHEDULE_ROWS = [
     ("2026-10-21", "Wed", 2, "S", "S"),
     ("2026-10-23", "Fri", 3, "H", "H"),
     ("2026-10-24", "Sat", 3, "C", "C (optional)"),
-    ("2026-10-26", "Mon", 3, "H", "H"),
-    ("2026-10-28", "Wed", 3, "S", "S"),
-    ("2026-10-30", "Fri", 4, "H", "H"),
-    ("2026-10-31", "Sat", 4, "C", "C (optional)"),
+    ("2026-10-29", "Thu", 3, "H", "H"),
+    ("2026-10-31", "Sat", 3, "S", "S"),
     ("2026-11-02", "Mon", 4, "H", "H"),
-    ("2026-11-04", "Wed", 4, "S", "S"),
-    ("2026-11-06", "Fri", 5, "H", "H"),
-    ("2026-11-07", "Sat", 5, "C", "C (optional)"),
+    ("2026-11-03", "Tue", 4, "C", "C (optional)"),
+    ("2026-11-05", "Thu", 4, "H", "H"),
+    ("2026-11-07", "Sat", 4, "S", "S"),
     ("2026-11-09", "Mon", 5, "H", "H"),
-    ("2026-11-11", "Wed", 5, "S", "S"),
-    ("2026-11-13", "Fri", 6, "H", "H"),
-    ("2026-11-14", "Sat", 6, "C", "C (optional)"),
+    ("2026-11-10", "Tue", 5, "C", "C (optional)"),
+    ("2026-11-12", "Thu", 5, "H", "H"),
+    ("2026-11-14", "Sat", 5, "S", "S"),
     ("2026-11-16", "Mon", 6, "H", "H"),
-    ("2026-11-18", "Wed", 6, "S", "S"),
-    ("2026-11-20", "Fri", 7, "H", "H"),
-    ("2026-11-21", "Sat", 7, "C", "C (optional)"),
+    ("2026-11-17", "Tue", 6, "C", "C (optional)"),
+    ("2026-11-19", "Thu", 6, "H", "H"),
+    ("2026-11-21", "Sat", 6, "S", "S"),
     ("2026-11-23", "Mon", 7, "H", "H"),
-    ("2026-11-25", "Wed", 7, "S", "S"),
-    ("2026-11-27", "Fri", 8, "H", "H"),
-    ("2026-11-28", "Sat", 8, "C", "C (optional)"),
+    ("2026-11-24", "Tue", 7, "C", "C (optional)"),
+    ("2026-11-26", "Thu", 7, "H", "H"),
+    ("2026-11-28", "Sat", 7, "S", "S"),
     ("2026-11-30", "Mon", 8, "H", "H"),
-    ("2026-12-02", "Wed", 8, "S", "S"),
-    ("2026-12-04", "Fri", 8, "R", "R — Week 8 reassessment"),
+    ("2026-12-01", "Tue", 8, "C", "C (optional)"),
+    ("2026-12-03", "Thu", 8, "H", "H"),
+    ("2026-12-05", "Sat", 8, "S", "S"),
+    ("2026-12-07", "Mon", 8, "R", "R — Week 8 reassessment"),
 ]
 
 

@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  const APP_BUILD = "2026.10.16-ron-restart-wk2";
+  const APP_BUILD = "2026.10.29-ron-shift";
   const PEOPLE = [
     { id: "ron", label: "Ron", file: "program-ron.json" },
     { id: "cindy", label: "Cindy", file: "program-cindy.json" },
