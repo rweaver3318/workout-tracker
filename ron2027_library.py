@@ -65,9 +65,21 @@ def define_library(L, yt):
       yt("forward step down exercise physical therapy"),
       easier="Use a lower step, or only go halfway down.")
     L("split_hold", "Short split-stance hold", "Hips",
-      "Stand in a short staggered stance (one foot a normal step ahead), holding a counter. Bend both knees only a few inches and hold, with your weight mostly on the front leg. No deep lunges.",
+      "Stand in a short staggered stance (one foot a normal step ahead), holding a counter. Bend both knees only a few inches and hold, with your weight mostly on the front leg. This is the first step toward forward lunges.",
       yt("split squat isometric hold supported"),
       easier="Bend less, lean more on the counter, or shorten the hold.")
+    L("fwd_lunge", "Forward lunge", "Hips",
+      "Stand tall (hold a counter or the bench at first). Take a normal-size step forward, then bend both knees and lower straight down until the front thigh is about halfway to level with the floor, or as low as is comfortable. Front knee stays over the middle of the foot, chest tall, back knee never touches the floor. Push through the front heel to step back to standing. The workout says how slow to lower and whether to hold dumbbells at your sides." + " Stop rule: if hip pain (either side) or knee pain goes above 3 out of 10, stop the lunges for today and use the easier option next time.",
+      yt("forward lunge proper form beginner"),
+      easier="Hold a counter, take a shorter step and go less deep, or do the short split-stance hold instead.")
+    L("side_lunge", "Side lunge", "Hips",
+      "Stand tall with feet together. Take a wide step to the side, sit your hips back over that foot and bend that knee, keeping the other leg fairly straight and both feet pointing forward. Go only as low as is comfortable (no deep squat). Push off the bent leg to step back to standing. This is the wide-ball move in pickleball." + " Stop rule: if hip pain (either side) or knee pain goes above 3 out of 10, stop the lunges for today and use the easier option next time.",
+      yt("lateral lunge proper form beginner"),
+      easier="Smaller step, shallower bend, a hand on the counter, or hold the bottom position for 15 to 20 seconds instead of doing reps.")
+    L("reaction_lunge", "Step-and-return reaction lunge", "Footwork",
+      "Start in your ready position. Lunge out quickly to a spot (front-left, front-right, left side or right side, mixing them up as if reaching for a ball), land softly with the knee over the foot, touch down for a moment, then push back fast to the ready position. Comfortable depth only; speed comes from the push back, not from going deep." + " Stop rule: if hip pain (either side) or knee pain goes above 3 out of 10, stop the lunges for today and use the easier option next time.",
+      yt("pickleball lunge footwork drill"),
+      easier="Slower, shorter lunges with a pause in the ready position between reps.")
     L("sl_rdl", "Single-leg Romanian deadlift, hand on the wall", "Balance",
       "Stand on one leg, fingertips on a wall or counter. Hinge forward at the hips as the free leg reaches straight back, hips level and back flat, only as far as is comfortable, then stand up tall. Great for balance, hips and golf posture.",
       yt("single leg romanian deadlift supported wall"),

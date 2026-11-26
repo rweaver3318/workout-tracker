@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  const APP_BUILD = "2026.11.26-pickleball-golf-year";
+  const APP_BUILD = "2026.11.26b-lunges";
   const PEOPLE = [
     { id: "ron", label: "Ron", file: "program-ron-2027.json" },
     { id: "cindy", label: "Cindy", file: "program-cindy.json" },

@@ -19,7 +19,8 @@ def legs(ph, n, recovery):
             ("Tendon holds", [
                 X("calf_hold", 2, hold="30 seconds, single leg", side=RIGHT_EXTRA, effort=pick(["about 5 out of 10 effort", "about 6 out of 10 effort", "about 6 out of 10 effort"], n),
                   notes="Two legs is fine for the first workout if single-leg feels like too much." if n == 1 else ""),
-                X("wall_sit", 2, hold="30 seconds", effort="comfortable, about 5 out of 10"),
+                X("split_hold", 2, hold="20 seconds", side=EACH, load="holding a counter", effort="comfortable, about 5 out of 10") if n < 3 else
+                X("fwd_lunge", 2, reps=5, side=EACH, tempo="2 seconds down, 2 seconds back up", load="body weight, holding a counter, short step and shallow"),
             ]),
             ("Grip", [X("farmer_hold", 2, hold="30 seconds", load="20 lb each hand" if n == 1 else "30 lb each hand")]),
             ("Cool-down", [X("calf_stretch", 1, hold="30 seconds each position", side=EACH)]),
@@ -37,7 +38,8 @@ def legs(ph, n, recovery):
                 X("calf_slow", 2, reps=pick([8, 10, 12, 8, 10, 12], n), tempo=T_CALF, side=RIGHT_EXTRA,
                   load=pick(["body weight, flat floor", "body weight, flat floor", "body weight, step edge", "10 lb in hand, step edge", "15 lb in hand, step edge", "20 lb in hand, step edge"], n)),
                 X("calf_bent", 2, reps=pick([12, 12, 15, 12, 12, 15], n), tempo=T_CALF, load=pick(["two 20 lb", "two 20 lb", "two 30 lb", "two 30 lb", "two 30 lb", "a 50 lb and a 30 lb"], n) + " dumbbells on your knees"),
-                X("wall_sit", 2, hold=pick(["30 seconds", "40 seconds", "45 seconds", "40 seconds", "45 seconds", "45 seconds"], n), effort="about 6 to 7 out of 10"),
+                X("fwd_lunge", 2, reps=pick([6, 8, 8, 6, 8, 8], n), side=EACH, tempo="3 seconds down, 1 second back up",
+                  load=pick(["body weight, hand on a counter", "body weight", "body weight", "10 lb in each hand", "10 lb in each hand", "15 lb in each hand"], n)),
             ]),
             ("Hips", [X("clamshell" if n % 2 else "side_leg_lift", 2, reps=12, side=EACH, tempo="2 seconds up, hold 1, 2 seconds down")]),
             ("Cool-down", [X("calf_stretch", 1, hold="30 seconds each position", side=EACH)]),
@@ -58,8 +60,8 @@ def legs(ph, n, recovery):
                 X("calf_bent", 2, reps=pick([10, 8, 8, 10, 8, 8], n), tempo=T_CALF, load="a 50 lb and a 30 lb dumbbell on your knees"),
             ]),
             ("Hips and grip", [
-                X("split_hold", 2, hold=pick(["30 seconds", "30 seconds", "40 seconds", "30 seconds", "40 seconds", "45 seconds"], n), side=EACH,
-                  load="no weight" if n < 4 else "20 lb in each hand", effort="about 7 out of 10"),
+                X("fwd_lunge", 2, reps=pick([8, 8, 6, 8, 8, 6], n), side=EACH, tempo="3 seconds down, 1 second back up",
+                  load=pick(["15 lb", "20 lb", "20 lb", "20 lb", "30 lb", "30 lb"], n) + " in each hand", effort="Leave 2 reps in the tank"),
                 X("bb_top_hold", 2, hold=pick(["20 seconds", "25 seconds", "30 seconds", "25 seconds", "30 seconds", "30 seconds"], n), load="your Romanian deadlift weight",
                   notes="Skip in heavy pickleball-plus-golf weeks (elbow rule)."),
             ]),
@@ -77,7 +79,8 @@ def legs(ph, n, recovery):
                 X("bb_rdl", 3, reps=5, tempo=T_FAST, load="about 70 percent of your heaviest strength-phase weight",
                   effort="Every rep quick on the way up; end the set if it slows down", rest=75),
                 X("hip_thrust", 2, reps=6, tempo="drive up fast, hold 1, 3 seconds down", load="your strength-phase weight minus about 20 lb"),
-                X("step_up", 2, reps=6, side=EACH, tempo="step up quickly, 3 seconds down", load="no weight" if n == 1 else "10 lb in each hand"),
+                X("fwd_lunge", 2, reps=6, side=EACH, tempo="2 seconds down, push back up quickly", load="15 lb in each hand" if n == 1 else "20 lb in each hand",
+                  effort="Every push-back quick; leave 3 reps in the tank"),
             ]),
             ("Heavy calf", [
                 X("calf_slow", 2, reps=6, tempo="rise quickly, hold 1, 3 seconds down", side=RIGHT_EXTRA, load="30 lb in hand, step edge"),
@@ -96,7 +99,7 @@ def legs(ph, n, recovery):
             ]),
             ("Calf and hips", [
                 X("calf_slow", 2, reps=6, tempo=T_CALF, side=RIGHT_EXTRA, load="30 lb in hand, step edge"),
-                X("wall_sit", 2, hold="45 seconds", effort="about 7 out of 10"),
+                X("fwd_lunge", 2, reps=6, side=EACH, tempo="2 seconds down, push back up quickly", load="20 lb in each hand", effort="Leave 3 reps in the tank"),
                 X("wall_press_hold", 2, hold="30 seconds", side=EACH),
             ]),
             ("Grip", [X("farmer_hold", 1, hold="40 seconds", load="50 lb each hand (or 30s)",
@@ -131,7 +134,8 @@ def sport(ph, n, recovery, retest):
             ("Balance and core", [
                 X("pallof_hold", 2, hold="20 seconds", side=EACH, effort="moderate band tension"),
                 X("sl_balance", 2, hold="20 seconds", side=EACH, notes="Eyes open." if n < 3 else "Eyes open, slow head turns."),
-                X("band_walk", 2, reps="10 steps each way", load="light band above the knees"),
+                X("side_lunge", 2, hold="15 seconds in a shallow side lunge", side=EACH, load="hand on a counter") if n == 1 else
+                X("side_lunge", 2, reps=5, side=EACH, tempo="2 seconds down, 2 seconds back", load="body weight, hand on a counter, small step"),
             ]),
             ("Calf and elbow", [
                 X("calf_slow", 2, reps=10, tempo=T_CALF, load="two legs, flat floor", notes="Add 1 single-leg set of 6 on the right if it feels easy." if n > 1 else ""),
@@ -148,7 +152,8 @@ def sport(ph, n, recovery, retest):
                 X("band_chop" if n % 2 else "band_lift", 2, reps=10, side=EACH, tempo="2 seconds across, 2 seconds back"),
             ]),
             ("Balance and legs", [
-                X("step_up", 2, reps=pick([8, 8, 10, 8, 10, 10], n), side=EACH, tempo="2 seconds up, 3 seconds down", load="no weight" if n < 4 else "10 lb in each hand"),
+                X("side_lunge", 2, reps=pick([6, 8, 8, 6, 8, 8], n), side=EACH, tempo="3 seconds down, 1 second back",
+                  load=pick(["body weight, hand on a counter", "body weight", "body weight", "10 lb dumbbell at your chest", "10 lb dumbbell at your chest", "15 lb dumbbell at your chest"], n)),
                 X("sl_balance", 2, hold="30 seconds", side=EACH, notes=pick(["Slow head turns.", "Slow head turns.", "Toss a ball hand to hand.", "Toss a ball hand to hand.", "Eyes closed for 10 seconds, counter right there.", "Eyes closed for 10 to 15 seconds."], n)),
             ]),
             ("Tendon holds", [
@@ -165,7 +170,8 @@ def sport(ph, n, recovery, retest):
             ("Single-leg strength and braking", [
                 X("sl_rdl", 2, reps=8, side=EACH, tempo=T_HINGE, load=pick(["no weight", "10 lb", "15 lb", "15 lb", "20 lb", "20 lb"], n) + " in the opposite hand"),
                 X("step_down", 2, reps=pick([6, 8, 8, 6, 8, 8], n), side=EACH, tempo="3 seconds down, light tap, 1 second up"),
-                X("side_stick", 2, reps=5, side=EACH, notes="Hold every landing 2 seconds."),
+                X("side_lunge", 2, reps=pick([8, 8, 6, 8, 8, 6], n), side=EACH, tempo="3 seconds down, 1 second back",
+                  load=pick(["15 lb", "20 lb", "20 lb", "20 lb", "30 lb", "30 lb"], n) + " dumbbell at your chest", effort="Leave 2 reps in the tank"),
             ]),
             ("Rotation", [
                 X("band_lift" if n % 2 else "band_chop", 2, reps=8, side=EACH, tempo="2 seconds across, 3 seconds back", load="medium to heavy band"),
@@ -183,7 +189,7 @@ def sport(ph, n, recovery, retest):
             ("Footwork and braking", [
                 X("split_step", 3, reps=6, notes="Alternate left and right."),
                 X("shuffle_stop", 2, reps=4, side=EACH),
-                X("brake_step", 2, reps=5),
+                X("reaction_lunge", 2, reps=pick([6, 8, 8, 8], n), notes="Mix front-left, front-right, left and right. Body weight."),
             ]),
             ("Rotation speed", [
                 X("fast_chop", 3, reps=6, side=EACH, tempo="fast across, 3 seconds back", notes="Alternate chop and lift each set."),
@@ -200,8 +206,8 @@ def sport(ph, n, recovery, retest):
             ("Warm-up", wu_sport()),
             ("Shoulder Reliever", [reliever(k, n)]),
             ("Footwork and braking", [
-                X("split_step", 2, reps=6, notes="Alternate left and right."),
-                X("shuffle_stop", 2, reps=4, side=EACH),
+                X("reaction_lunge", 2, reps=8, notes="Start each rep with a small split step if you pass the hop checklist. Mix the directions."),
+                X("side_lunge", 1, reps=6, side=EACH, tempo="2 seconds down, push back quickly", load="15 lb dumbbell at your chest"),
                 X("line_hops", 2, hold="10 seconds", rest=40, notes="Only if you pass the hop checklist; otherwise quick side-steps over the line."),
             ]),
             ("Rotation and core", [
